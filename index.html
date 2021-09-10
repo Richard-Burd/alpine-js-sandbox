@@ -3,81 +3,34 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <!-- Script you need to read alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
     <style>
-      body{background: skyblue; font-family: verdana; color: #fff; padding: 30px;}
+      body{background: skyblue; font-family: Arial; color: #fff; padding: 30px;}
       h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
       p{font-size: 16px; text-align: center;}
     </style>
   </head>
   <body>
-    <h1>This is the Test Website</h1>
+    <h1>Alpine.js Test Website</h1>
     <p>You should see this text</p>
-    <div id="The code below consists of Alpine.js components">
-      <!-- Script you need to download alpine.js -->
-      <script src="//unpkg.com/alpinejs" defer></script>
 
-      <!-- Button with alert function -->
-      <button x-data x-on:click="alert('hi there')">
-        Click Me
+
+
+    <!-- Button that hides & shows a div w/alpine.js component -->
+    <div x-data="{isShowing: false}">
+      <button x-data x-on:click="isShowing = !isShowing">
+        Show or Hide
       </button>
 
-      <!-- Button that hides & shows a div -->
-      <div x-data="{isShowing: false}">
-        <button x-data x-on:click="isShowing = !isShowing">
-          Show or Hide
-        </button>
-
-        <div x-show="isShowing">
-          i am content that should dissappear and reappear
-        </div>
+      <div x-show="isShowing">
+        i am content that should dissappear and reappear via Alpine.js magic
       </div>
-
-      <!-- Button that hides & shows a div + changes displayed text -->
-      <div x-data="{isShowing: false}">
-        <button
-          x-data
-          x-on:click="isShowing = !isShowing"
-          x-text="isShowing ? 'Hide' : 'Show'">
-        </button>
-
-        <div x-show="isShowing">
-          i am content that should dissappear and reappear
-        </div>
-      </div>
-
-      <!-- Looping over a list -->
-      <div x-data="{ people: ['tom', 'bob', 'cat'] }">
-        <template x-for="person in people">
-          <li x-text="person"></li>
-        </template>
-      </div>
-
-      <!-- adding to an array that gets looped over -->
-      <div
-        style="background-color:#ccffcc; padding: 20px"
-        x-data="{
-          newPerson: '',
-          people: ['tom', 'bob', 'cat'],
-          add() {this.people.push(this.newPerson)}
-        }"
-      >
-      <!-- input to add a person -->
-      <form x-on:submit.prevent="add">
-        <input type="text" x-model="newPerson">
-        <button>Add Person</button>
-      </form>
-
-      <!-- input to add a person; the 'x-on' can be shorthanded to '@' -->
-      <form @submit.prevent="add">
-        <input type="text" x-model="newPerson">
-        <button>Add Person (Shorthand Version)</button>
-      </form>
-
-      <!-- Looping over people -->
-        <template x-for="person in people">
-          <li x-text="person"></li>
-        </template>
-      <div>
     </div>
+
+
+
   </body>
 </htms>
