@@ -1,0 +1,23 @@
+{
+  "name": "alpine-js-sandbox",
+  "version": "1.0.0",
+  "description": "Full-stack Test App using Alpine.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Richard-Burd/alpine-js-sandbox.git"
+  },
+  "author": "UCS Test Authors",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Richard-Burd/alpine-js-sandbox/issues"
+  },
+  "homepage": "https://github.com/Richard-Burd/alpine-js-sandbox#readme",
+  "dependencies": {
+    "alpinejs": "^3.3.3"
+  }
+}
