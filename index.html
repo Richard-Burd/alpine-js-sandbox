@@ -8,25 +8,26 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 
     <style>
-      body{background: skyblue; font-family: Arial; color: #fff; padding: 30px;}
+      body{background: #1876b4; font-family: Arial; color: #ceceb3; padding: 30px;}
       h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+      h2{font-size: 20px; letter-spacing: 1.5px; text-align: left;}
       p{font-size: 16px; text-align: center;}
     </style>
   </head>
   <body>
     <h1>Alpine.js Test Website</h1>
-    <p>You should see this text</p>
+    <p>The background you're looking at should be blue</p>
 
 
 
     <!-- Button that hides & shows a div w/alpine.js component -->
     <div x-data="{isShowing: false}">
       <button x-data x-on:click="isShowing = !isShowing">
-        Show or Hide
+        Alpine.js Component Button
       </button>
 
       <div x-show="isShowing">
-        i am content that should dissappear and reappear via Alpine.js magic
+        <h2>i am content that should dissappear and reappear via the Alpine.js framework every time you click the button above!</h2>
       </div>
     </div>
 
