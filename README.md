@@ -1,6 +1,18 @@
 # alpine-js-sandbox
 A place for me to screw around with and learn how to use Alpine.js
 
+### Requirements:
+
+Node.js, NVM, and NPM are required
+
+### Installation instructions (Ubuntu):
+
+1. run: `npm install` to install the alpinejs node module
+2. run: `npm start` to boot up the local server at 127.0.0.1; NOTE: this may be different on a Mac, if so go into the ***app.js*** file in the main directory to insert a different address
+
+You should then be able to see the index.html file that looks like this:
+
+![](https://i.imgur.com/gJhua2i.jpg)
 
 ### This Node.js application should be able to do the following:
 
