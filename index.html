@@ -7,16 +7,23 @@
     <!-- Script you need to read alpine.js -->
     <script src="//unpkg.com/alpinejs" defer></script>
 
+    <!-- Internal JavaScript file -->
+    <script type="text/javascript" src="/router.js"></script>
+    <script type="text/css" src="styles.css"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
     <style>
-      body{background: #1876b4; font-family: Arial; color: #ceceb3; padding: 30px;}
-      h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
-      h2{font-size: 20px; letter-spacing: 1.5px; text-align: left;}
-      p{font-size: 16px; text-align: center;}
+      body{background: #1876b4; font-family: Arial; padding: 30px;}
+      h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center; color: #ceceb3;}
+      h2{font-size: 20px; letter-spacing: 1.5px; text-align: left; color: #ceceb3;}
+      p{font-size: 16px; text-align: center; color: #ceceb3;}
     </style>
   </head>
   <body>
     <h1>Alpine.js Test Website</h1>
     <p>The background you're looking at should be blue</p>
+    <p><h3>This H3 text should be orange and styled by the CSS file</h3></p>
 
 
     <!-- Button that hides & shows a div w/alpine.js component -->
@@ -31,4 +38,4 @@
     </div>
 
   </body>
-</htms>
+</html>
