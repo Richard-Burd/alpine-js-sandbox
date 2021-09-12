@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   height="512"
-   viewBox="0 0 512 512"
-   width="512"
+   height="560"
+   viewBox="0 0 560 560"
+   width="560"
    version="1.1"
    id="svg25"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,16 +12,17 @@
   <clipPath
      id="a">
     <path
-       d="m0 0h469.611v469.611h-469.611z"
+       d="M 0,0 H 469.611 V 469.611 H 0 Z"
        id="path2" />
   </clipPath>
   <radialGradient
      id="b"
-     cx=".431"
-     cy=".33"
-     gradientTransform="matrix(.99999914 .001309 -.001309 .99999914 0 -.001)"
-     gradientUnits="objectBoundingBox"
-     r=".637">
+     cx="202.57001"
+     cy="155.10001"
+     gradientUnits="userSpaceOnUse"
+     r="299.39001"
+     fx="202.57001"
+     fy="155.10001">
     <stop
        offset="0"
        stop-color="#fff"
@@ -36,47 +37,42 @@
   <clipPath
      id="c">
     <path
-       d="m0 0h512v512h-512z"
+       d="M 0,0 H 512 V 512 H 0 Z"
        id="path10" />
   </clipPath>
-  <rect
-     style="opacity:1;fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:1.00157;stroke-linecap:square;paint-order:fill markers stroke"
-     id="rect53"
-     width="512"
-     height="512"
-     x="0"
-     y="0" />
   <g
      clip-path="url(#c)"
-     id="g23">
+     id="g23"
+     transform="translate(24.389001,24)">
     <g
        clip-path="url(#a)"
-       transform="translate(21 21)"
+       transform="translate(21,21)"
        id="g21">
       <circle
          cx="235"
          cy="235"
          fill="#2e3440"
          r="235"
-         transform="translate(-.389)"
+         transform="translate(-0.389)"
          id="circle13" />
       <path
-         d="m0 0h129.327v129.327h-129.327z"
+         d="M 0,0 H 129.327 V 129.327 H 0 Z"
          fill="#d8dee9"
-         transform="matrix(.70710678 .70710678 -.70710678 .70710678 326.253 143.085)"
+         transform="rotate(45,-9.5923729,465.36471)"
          id="path15" />
       <path
-         d="m0 0 258.524.129-129.2 129.2h-129.324z"
+         d="m 0,0 258.524,0.129 -129.2,129.2 H 0 Z"
          fill="#8ac0cf"
-         transform="matrix(.70710678 .70710678 -.70710678 .70710678 143.729 143.085)"
+         transform="rotate(45,-100.85437,245.03875)"
          id="path17" />
       <circle
          cx="235"
          cy="235"
          fill="url(#b)"
          r="235"
-         transform="translate(-.389)"
-         id="circle19" />
+         transform="translate(-0.389)"
+         id="circle19"
+         style="fill:url(#b)" />
     </g>
   </g>
 </svg>
