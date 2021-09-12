@@ -1,3 +1,4 @@
+////////////////////////////////////////////////////////////////////////////////
 // Node JS Tutorial for Beginners #17 - Serving HTML Pages
 // https://www.youtube.com/watch?v=BBOUfdUZIVo
 
@@ -13,3 +14,15 @@ let server = http.createServer(function(req, res){
 
 server.listen(3000, '127.0.0.1');
 console.log('now listening to port 3000');
+////////////////////////////////////////////////////////////////////////////////
+
+// // Node.js Crash Course Tutorial #4 - Requests & Responses
+// // https://youtu.be/DQD00NAUPNk
+// const http = require('http');
+//
+// const server = http.createServer((req, res) => {
+//   console.log('request made');
+// })
+//
+// server.listen(3000, '127.0.0.1');
+// console.log('now listening to port 3000');
