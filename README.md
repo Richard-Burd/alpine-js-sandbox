@@ -12,7 +12,7 @@ Node.js, NVM, and NPM are required
 
 You should then be able to see the index.html file that looks like this:
 
-![](https://i.imgur.com/ik9mlM7.jpg)
+![](https://i.imgur.com/9MokhdS.jpg)
 
 ### This Node.js application should be able to do the following:
 
@@ -27,9 +27,10 @@ You should then be able to see the index.html file that looks like this:
 - [x] The app can display images from a remote location like imgur.com
 - [x] The app can display both raster (jpg) and vector(svg) images
 - [ ] A Google Sheets file can be iterated on and have a JSON file of it produced
-- [ ] The about.html page can iterate on a JSON file and display data
 - [x] The .html files can read a .css file and interpret it
-- [ ] An .html file can read a .js file and execute it properly
+- [x] An .html file can read a .js file and execute it properly
+- [x] An Alpine.js component can read a JavaScript file and iterate on it
+- [ ] An Alpine.js component can read a JSON file and iterate on it
 - [ ] The .css file detects a user's media and gracefully degredates text
 - [ ] The .css file detects a user's media and gracefully degredates an image
 - [ ] A navbar component appears on all html pages in the app

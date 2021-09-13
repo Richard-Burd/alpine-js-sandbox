@@ -1,0 +1,1 @@
+myArray = ["cat", "dog", "bird"]

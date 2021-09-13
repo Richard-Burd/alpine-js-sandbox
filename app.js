@@ -21,6 +21,10 @@ app.get('/images', (req, res) => {
   res.sendFile('./views/images.html', { root: __dirname});
 });
 
+app.get('/accordion', (req, res) => {
+  res.sendFile('./views/accordion.html', { root: __dirname});
+});
+
 // import css & image files
 // https://stackoverflow.com/questions/24582338/how-can-i-include-css-files-using-node-express-and-ejs
 app.use(express.static(__dirname + '/public'));
