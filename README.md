@@ -1,5 +1,5 @@
 # alpine-js-sandbox
-A place for me to screw around with and learn how to use Alpine.js
+I am planning to use Alpine.js to build out two new static sites but before I do that, I want to make sure I can do everything I need to do for those projects, so I will build out that functionality here, seperate from the projects.
 
 ### Requirements:
 
@@ -14,7 +14,7 @@ You should then be able to see the index.html file that looks like this:
 
 ![](https://i.imgur.com/9MokhdS.jpg)
 
-### This Node.js application should be able to do the following:
+### This Node.js application must be able to do the following in order for me to use Alpine.js on my upcomming projects:
 
 - [x] A Node.js server can read and display an index.html file
 - [x] The index.html file contains working Alpine.js components
@@ -33,6 +33,6 @@ You should then be able to see the index.html file that looks like this:
 - [ ] An Alpine.js component can read a JSON file and iterate on it
 - [ ] The .css file detects a user's media and gracefully degredates text
 - [ ] The .css file detects a user's media and gracefully degredates an image
-- [ ] A navbar component appears on all html pages in the app
+- [ ] A single navbar component appears on all html pages in the app
 - [ ] The navbar has three .html files listed and properly navigates to them
 https://alpinetoolbox.com/examples/navbar
