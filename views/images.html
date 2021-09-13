@@ -1,0 +1,44 @@
+<!-- Node JS Tutorial for Beginners #17 - Serving HTML Pages -->
+<!-- https://www.youtube.com/watch?v=BBOUfdUZIVo -->
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Script you need to read alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <style>
+      body{background: #888b4f; font-family: Arial; padding: 30px;}
+      h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center; color: #ceceb3; }
+      h2{font-size: 20px; letter-spacing: 1.5px; text-align: left; color: #ceceb3; }
+      p{font-size: 16px; text-align: left;}
+    </style>
+  </head>
+  <body>
+    <h1>Images</h1>
+
+    <div>
+      <nav>
+        <h2><a href="/">Home page</a></h2>
+      </nav>
+      <br><br>
+      <style>
+        img {max-width: 110px}
+      </style>
+      <div>
+        <p>This jpg image is stored in this app at: /public/images/alpinejs.jpg</p>
+        <img src="/images/alpinejs.jpg" alt="an alpine.js (.jpg file) logo stored natively inside the app">
+      </div>
+      <br><br>
+      <div>
+        <p>This jpg image is stored offsite on imgur.com at: https://i.imgur.com/db3IZaF.jpg</p>
+        <img src="https://i.imgur.com/db3IZaF.jpg" alt="an alpine.js (.jpg file) logo imported from imgur.com">
+      </div>
+      <br><br>
+      <div>
+        <p>This svg image is stored in this app at: /public/images/alpinejs.jpg</p>
+        <img src="/images/alpinejs.svg" alt="an alpine.js (.svg file) logo stored natively inside the app">
+      </div>
+    </div>
+  </body>
+</htms>

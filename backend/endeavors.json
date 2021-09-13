@@ -1,0 +1,29 @@
+[
+  {
+    "Endeavor": "Smallpox Eradication",
+    "Set": "Public Health Projects",
+    "Cost": "1.48 (millions USD)",
+    "Cost Explanation": "World expenditures on eradication program",
+    "Benefit": "234.37 (billions USD)",
+    "Benefit Explanation": "Avoided vaccination costs and avoided deaths, 3% discount rate",
+    "References": "Barrett"
+  },
+  {
+    "Endeavor": "Human Genome Project",
+    "Set": "R&D Projects",
+    "Cost": "6.67 (millions USD)",
+    "Cost Explanation": "Government spending over the project lifetime, 1990-2003",
+    "Benefit": "947.66 (billions USD)",
+    "Benefit Explanation": "Cumulative induced economic activity through 2010",
+    "References": "Tripp and Grueber"
+  },
+  {
+    "Endeavor": "Antibiotics Conservation",
+    "Set": "Public Health Projects",
+    "Cost": "4.7 (millions USD)",
+    "Cost Explanation": "Cost of implementing an antibiotic conservation program in Alberta in 2005. (Actual value is about $4.7 million but got rounded away.)",
+    "Benefit": "360.0 (millions USD)",
+    "Benefit Explanation": "Cost of antibiotics that were conserved",
+    "References": "Manun et al."
+  }
+]

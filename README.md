@@ -12,7 +12,7 @@ Node.js, NVM, and NPM are required
 
 You should then be able to see the index.html file that looks like this:
 
-![](https://i.imgur.com/gJhua2i.jpg)
+![](https://i.imgur.com/ik9mlM7.jpg)
 
 ### This Node.js application should be able to do the following:
 
@@ -23,10 +23,11 @@ You should then be able to see the index.html file that looks like this:
 - [x] The about.html page has a link to the index.html page
 - [ ] The info.html page displays Arial Rounded MT font
 - [ ] The info.html page has an animated accordion button
-- [ ] The app can display images embedded in an app directory
-- [ ] The app can display images from a remote location like imgur.com
+- [x] The app can display images embedded in an app directory
+- [x] The app can display images from a remote location like imgur.com
+- [x] The app can display both raster (jpg) and vector(svg) images
+- [ ] A Google Sheets file can be iterated on and have a JSON file of it produced
 - [ ] The about.html page can iterate on a JSON file and display data
-- [ ] The about.html page can iterate on a JavaScript object and display data
 - [x] The .html files can read a .css file and interpret it
 - [ ] An .html file can read a .js file and execute it properly
 - [ ] The .css file detects a user's media and gracefully degredates text
