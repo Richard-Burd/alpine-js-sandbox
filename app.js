@@ -1,28 +1,22 @@
-////////////////////////////////////////////////////////////////////////////////
-// Node JS Tutorial for Beginners #17 - Serving HTML Pages
-// https://www.youtube.com/watch?v=BBOUfdUZIVo
+// Node.js Crash Course Tutorial #6 - Express Apps
+// https://youtu.be/Lr9WUkeYSA8
 
-let http = require('http');
-let fs = require('fs');
+const express = require('express');
 
-let server = http.createServer(function(req, res){
-  console.log('request was made: ' + req.url);
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  let myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf8');
-  myReadStream.pipe(res);
+// express app
+const app = express();
+
+// listen for Requests
+app.listen(3000);
+
+app.get('/', (req, res) => {
+  res.sendFile('./views/index.html', { root: __dirname});
 });
 
-server.listen(3000, '127.0.0.1');
-console.log('now listening to port 3000');
-////////////////////////////////////////////////////////////////////////////////
+app.get('/about', (req, res) => {
+  res.sendFile('./views/about.html', { root: __dirname});
+});
 
-// // Node.js Crash Course Tutorial #4 - Requests & Responses
-// // https://youtu.be/DQD00NAUPNk
-// const http = require('http');
-//
-// const server = http.createServer((req, res) => {
-//   console.log('request made');
-// })
-//
-// server.listen(3000, '127.0.0.1');
-// console.log('now listening to port 3000');
+// import css files
+// https://stackoverflow.com/questions/24582338/how-can-i-include-css-files-using-node-express-and-ejs
+app.use(express.static(__dirname + '/public'));
