@@ -22,7 +22,7 @@ You should then be able to see the index.html file that looks like this:
 - [x] The index.html has a link to an about.html page
 - [x] The about.html page has a link to the index.html page
 - [ ] The info.html page displays Arial Rounded MT font
-- [ ] The info.html page has an animated accordion button
+- [ ] The accordion.html page has an animated accordion button
 - [x] The app can display images embedded in an app directory
 - [x] The app can display images from a remote location like imgur.com
 - [x] The app can display both raster (jpg) and vector(svg) images
