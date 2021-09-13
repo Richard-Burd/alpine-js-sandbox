@@ -1,5 +1,6 @@
 // fire this up in bash with the following command:
-// richardburd@ubuntu:~/Desktop/dev/alpine-js-sandbox(main)$node server
+// richardburd@ubuntu:~/Desktop/dev/alpine-js-sandbox(main)$node test-servers/vanillaNodeServer
+
 // NOTE: this file has been depricated with the installation of Express.js
 // now use app.js (instead of this file's server) by running this command:
 // richardburd@ubuntu:~/Desktop/dev/alpine-js-sandbox(main)$node app

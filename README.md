@@ -8,9 +8,7 @@ Node.js, NVM, and NPM are required
 ### Installation instructions (Ubuntu):
 
 1. run: `npm install` to install the alpine.js and express.js node modules
-2. run: `npm spa` to boot up the `singlePageHTTPServer.js` which will give you a simple, single page application
-3. or run: `node server` to boot up the server inside the `server.js` file and use Node's native routing without express.js
-4. or run: `node app` to boot up the server inside the `app.js` file which runs express.js
+2. run: `npm start` to boot up the application
 
 You should then be able to see the index.html file that looks like this:
 
@@ -28,6 +26,7 @@ You should then be able to see the index.html file that looks like this:
 - [ ] The app can display images embedded in an app directory
 - [ ] The app can display images from a remote location like imgur.com
 - [ ] The about.html page can iterate on a JSON file and display data
+- [ ] The about.html page can iterate on a JavaScript object and display data
 - [x] The .html files can read a .css file and interpret it
 - [ ] An .html file can read a .js file and execute it properly
 - [ ] The .css file detects a user's media and gracefully degredates text

@@ -2,10 +2,10 @@
   "name": "alpine-js-sandbox",
   "version": "1.0.0",
   "description": "Full-stack Test App using Alpine.js",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node spa.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
