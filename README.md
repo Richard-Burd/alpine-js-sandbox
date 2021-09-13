@@ -23,6 +23,7 @@ You should then be able to see the index.html file that looks like this:
 - [x] A GitHub repo is established for the application
 - [x] The index.html has a link to an about.html page
 - [x] The about.html page has a link to the index.html page
+- [ ] The info.html page displays Arial Rounded MT font
 - [ ] The info.html page has an animated accordion button
 - [ ] The app can display images embedded in an app directory
 - [ ] The app can display images from a remote location like imgur.com
@@ -33,3 +34,4 @@ You should then be able to see the index.html file that looks like this:
 - [ ] The .css file detects a user's media and gracefully degredates an image
 - [ ] A navbar component appears on all html pages in the app
 - [ ] The navbar has three .html files listed and properly navigates to them
+https://alpinetoolbox.com/examples/navbar
