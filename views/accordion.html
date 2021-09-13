@@ -1,6 +1,3 @@
-<!-- Smooth Accordion with TailwindCSS & Alpine.js -->
-<!-- https://codepen.io/QJan84/pen/zYvRMMw -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,16 +8,29 @@
     <!-- internal css file -->
     <link rel="stylesheet" type="text/css" href="./styles.css">
 
+    <!-- internal JavaScript file -->
+    <script src="scripts.js"></script>
+
+  </head>
+  <body>
+    <p><h3>This H3 text should be orange and styled by the styles.css file in the '/public' directory</h3></p>
+
+    <!-- reading the scripts.js (JavaScript) file using Alpine.js component -->
+    <div x-data="{ myString }">
+      <p x-text="myString"></p>
+    </div>
+
+    <!-- accordion from here: https://www.w3schools.com/howto/howto_js_accordion.asp -->
+    <!-- NOTE: this is raw HTML, CSS, and JavaScript; there is no Alpine.js being used here -->
+    <button class="accordion">Click on this accordion button and it should slowly descend</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+  </body>
+</html>
+
 <!-- NOTE This may require TailwindCSS to be installed -->
 <!-- https://codepen.io/QJan84/pen/zYvRMMw -->
 <!-- https://codepen.io/hmaesta/pen/MWKoGEm -->
 <!-- https://nemrut.co/blog/how-to-create-accordion-tabs-using-alpine-js-tailwindcss -->
-
-  <p>You should see nothing here except this message, this page is not yet built out</p>
-
-  </head>
-  <body>
-
-
-  </body>
-</htms>
