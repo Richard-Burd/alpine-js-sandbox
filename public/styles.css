@@ -23,8 +23,9 @@ h3 {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
- padding: 0 18px;
- background-color: white;
- display: none;
- overflow: hidden;
+   padding: 0 18px;
+   background-color: orange;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.5s ease-out;
 }
