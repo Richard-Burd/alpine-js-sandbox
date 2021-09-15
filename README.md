@@ -31,6 +31,8 @@ You should then be able to see the index.html file that looks like this:
 - [x] An .html file can read a .js file and execute it properly
 - [x] An Alpine.js component can read a JavaScript file and iterate on it
 - [ ] An Alpine.js component can read a JSON file and iterate on it
+- [ ] There is a master list of all references used on a website
+- [ ] A component can display selected references that are listed alphabetically
 - [ ] The .css file detects a user's media and gracefully degredates text
 - [ ] The .css file detects a user's media and gracefully degredates an image
 - [ ] A single navbar component appears on all html pages in the app
