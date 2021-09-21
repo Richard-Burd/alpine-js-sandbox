@@ -11,8 +11,8 @@ let dynamicUrls = []
 
 // based on code similiar to this:
 // https://medium.com/stackfame/get-list-of-all-files-in-a-directory-in-node-js-befd31677ec5
-// the purpose of this function is to create an array dynamically be reading the contents of
-// the ./views directory and populating those contents into the dynamicUrls array above
+// the purpose of this function is to create an array dynamically by reading the contents of
+// the "./views" directory and populating those contents into the 'dynamicUrls' array above
 fs.readdir(directoryPath, function (err, files) {
   myArray = []
 
@@ -21,8 +21,13 @@ fs.readdir(directoryPath, function (err, files) {
     return console.log('Unable to scan directory: ' + err);
   } else {
     files.forEach(function (file) {
-      if (!file.includes("404") && !file.includes("index")) { // excluding files that don't follow the pattern
+      // we do not want to create routes for these two files in the "./views" directory
+      if (!file.includes("404") && !file.includes("index")) {
         console.log(`I can only console.log this file: ${file}`);
+
+        // This is working as it should, the myArray inside this function is populated
+        // with a string of each file in the "./views" folder, and the dile extensions
+        // are taken off the string before it is pushed into the 'myArray'
         myArray.push(`/${file.substr(0, file.lastIndexOf('.')) || file}`);
       };
     });
@@ -35,7 +40,8 @@ fs.readdir(directoryPath, function (err, files) {
   // this doesn't work, even w/ "fs.readdirSync" replacing the "fs.readdir"
   dynamicUrls.push("can't push anything to this array from inside this function")
 
-  // if I could just reset the value of dynamicUrls like this, it would match the staticUrls array below
+  // if I could just reset the value of dynamicUrls like this, it would match the staticUrls array below,
+  // NOTE: this is all I need to make this server work the way I want it to (for now at least)
   dynamicUrls = myArray
 })
 
