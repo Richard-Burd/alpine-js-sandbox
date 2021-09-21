@@ -6,12 +6,6 @@ app.listen(3000);
 
 const directoryPath = path.join(__dirname, 'views');
 
-// the index URL is unique and has its own get request
-app.get('/', (req, res) => {
-  res.sendFile('./views/index.html', { root: __dirname});
-});
-
-
 // empty array to be populated with routes in the ./views directory
 let dynamicUrls = []
 
@@ -27,41 +21,57 @@ fs.readdir(directoryPath, function (err, files) {
     return console.log('Unable to scan directory: ' + err);
   } else {
     files.forEach(function (file) {
-      if (!file.includes("404") && !file.includes("index")) {
+      if (!file.includes("404") && !file.includes("index")) { // excluding files that don't follow the pattern
         console.log(`I can only console.log this file: ${file}`);
         myArray.push(`/${file.substr(0, file.lastIndexOf('.')) || file}`);
       };
     });
   }
+
+  // this works as it should; the 'myArray' array in this function has been properly populated by the
+  // "files.forEach(function (file)" body above
   console.log(`myArray values are: ${myArray} ... but I can't get them out of this function`);
-  dynamicUrls.push("can't push anything to this array") // this doesn't work, even w/ "fs.readdirSync"
-  dynamicUrls = myArray // if I could just reset the value of dynamicUrls like this, it would match the urls array below
+
+  // this doesn't work, even w/ "fs.readdirSync" replacing the "fs.readdir"
+  dynamicUrls.push("can't push anything to this array from inside this function")
+
+  // if I could just reset the value of dynamicUrls like this, it would match the staticUrls array below
+  dynamicUrls = myArray
 })
 
 // new URL's must be added to this array manually for now, until the above code is working properly
 // eventually this 'urls' array will be replaced with the 'dynamicUrls' array above
-let urls = [
+let staticUrls = [
   '/about',
   '/images',
   '/accordion'
 ];
 
-// eventually the 'urls' array below will be replaced with the 'dynamicUrls 'array
-urls.forEach(function(name) {
+// eventually the 'staticUrls' array below will be replaced with the 'dynamicUrls' array once the
+// "fs.readdir" function above is working properly
+staticUrls.forEach(function(name) {
   app.get(name, function(req, res) {
     res.sendFile(`./views/${name}.html`, { root: __dirname});
   });
 });
 
+// the homepage URL has unique naming so it is not dynamically rendered like the other URL's
+app.get('/', (req, res) => {
+  res.sendFile('./views/index.html', { root: __dirname});
+});
+
 app.use(express.static(__dirname + '/public'));
 
-// some console logs to see what is going on
-console.log("urls array is populated with the following:")
-console.log(urls)
+// this is working correctly, so this 'urls' array is fed into the function above
+// in order to dynamically create 'get' requests
+console.log("staticUrls array is populated with the following:")
+console.log(staticUrls) //=> [ '/about', '/images', '/accordion' ]
 
 console.log(" ")
 
-console.log("dynamicUrls array is populated with the following:")
-console.log(dynamicUrls)
+// this is not working correctly, so I cannot feed it into the function above
+// in order to dynamically create 'get' requests
+console.log("dynamicUrls array is populated with the following:") // this is not working
+console.log(dynamicUrls) //=> []
 
 console.log(" ")
