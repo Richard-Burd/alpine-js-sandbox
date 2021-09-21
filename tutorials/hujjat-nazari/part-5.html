@@ -1,0 +1,55 @@
+<!-- https://youtu.be/f1VMCTHqFW4 -->
+<!-- Alpine.js Directives - x-if vs x-show with example -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Alpine.js Directives - x-if vs x-show with exampleIntroduction to alpinejs</title>
+    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+</head>
+<body>
+
+
+
+  <!-- basic dropdown component-->
+  <div x-data="{ open: false }">
+    <button x-on:click="open = ! open">Toggle Dropdown</button>
+    <div x-show="open">
+      Dropdown contents...
+    </div>
+  </div>
+
+
+
+  <!-- conditional dropdown component -->
+  <div x-data="{ open: false }">
+    <button x-on:click="open = ! open">Toggle Dropdown</button>
+
+    <!-- the conditional 'x-if' goes in a template tag -->
+    <template x-if="open">
+      <div>
+        Dropdown contents...
+      </div>
+    </template>
+  </div>
+
+
+
+  <!-- This 3rd component will not work because  -->
+  <div x-data="{ open: false }">
+    <button x-on:click="open = ! open">Toggle Dropdown</button>
+
+    <!-- here the 'x-if' is changed to 'x-show' but 'x-show' will only work on elements -->
+    <!-- ...and the <template> tag is not a true element in this case -->
+    <template x-show="open">
+      <div>
+        Dropdown contents... <!-- this will not drop down -->
+      </div>
+    </template>
+  </div>
+
+</body>
+</html>

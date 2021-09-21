@@ -1,0 +1,28 @@
+<!-- https://youtu.be/vpPLvvoLfg8 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Introduction to alpinejs</title>
+    <!-- not reccomended: this will use the latest version -->
+    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
+
+    <!-- The latest version is available here: -->
+    <!-- https://alpinejs.dev/essentials/installation -->
+    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+</head>
+<body>
+
+  <!-- NOTE: you cannot access the 'counter' variable outside this <div> component -->
+    <!-- attribute of "x-data" makes this an alpine.js component -->
+    <div x-data="{ counter: 1 }"> <!-- an object w/'counter' key and a value of '1' -->
+      <button x-on:click="counter++">Plus</button> <!-- JavaScript code: '++' -->
+      show counter: <i x-text="counter"></i>
+    </div>
+  <!-- NOTE: you cannot access the 'counter' variable outside this <div> component -->
+
+</body>
+</html>

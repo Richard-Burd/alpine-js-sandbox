@@ -1,0 +1,43 @@
+<!-- https://youtu.be/vpPLvvoLfg8 -->
+<!-- Alpine.js Component Scopes in V3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Introduction to alpinejs</title>
+    <!-- not reccomended: this will use the latest version -->
+    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
+
+    <!-- The latest version is available here: -->
+    <!-- https://alpinejs.dev/essentials/installation -->
+    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+</head>
+<body>
+
+  <!-- the 'counter' value is scoped to the parent because the child has its own 'counter' value -->
+  <div id="parent-component" x-data="{ counter: 1, surname: 'nazari' }">
+    <button x-on:click="counter++">Plus</button>
+    show counter: <i x-text="counter"></i>
+    show id: <i x-text="surname"></i>
+    <!-- the child has its own 'counter' value but not its own 'surname'  -->
+    <div id="child-component" x-data="{ counter: 1 }">
+      <button x-on:click="counter++">Plus</button>
+      show counter: <i x-text="counter"></i>
+
+      <!-- the child does not have its own surname so it inherits from the parent -->
+      show id: <i x-text="surname"></i>
+    </div>
+  </div>
+
+  <!-- adjacent components do not inherit values from components in the same scope -->
+  <div x-data="{ surname: 'bayat' }">
+    <li>Will not show: <i x-text="counter"></i></li>
+    <li>Will show: <i x-text="surname"></i></li>
+  </div>
+
+
+</body>
+</html>

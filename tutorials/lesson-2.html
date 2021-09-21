@@ -1,0 +1,18 @@
+<!-- https://youtu.be/VerLjLcXsTk -->
+
+<!-- Script you need to download alpine.js -->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
+
+<!-- Dropdown/Modal -->
+<!-- we define state using an { object } -->
+<!-- the state is scoped to the selector you put it in -->
+<!-- we use the "x-data" HTML attribute to define that state -->
+<div x-data="{ open: false }">
+  <button @click="open = true">Open Dropdown</button>
+  <ul
+    x-show="open"
+    @click.away="open = false"
+  >
+    Dropdown Body
+  </ul>
+</div>

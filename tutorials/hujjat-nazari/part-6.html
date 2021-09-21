@@ -1,0 +1,48 @@
+<!-- Left off here: -->
+<!-- https://youtu.be/VKLxU-_QdEY?t=249 -->
+
+
+
+
+
+
+<!-- https://youtu.be/VKLxU-_QdEY -->
+<!-- Alpine.js Directive - x-transition with example -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Alpine.js Directives - x-if vs x-show with exampleIntroduction to alpinejs</title>
+    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+</head>
+<body>
+
+
+
+  <!-- Dropdown component -->
+  <div x-data="{ open: false }">
+    <button x-on:click="open = ! open">Toggle Dropdown</button>
+
+    <!-- Alpine.js provides a 'transition' helper-->
+    <!-- the transition helper has many directives such as 'opacity' and 'scale': -->
+    <!-- https://alpinejs.dev/essentials/installation -->
+    <div x-show="open" x-transition.opacity.delay.400ms.scale.10>
+      <ul>
+        <li>Getting Started On macOS</li>
+        <li>Getting Started On Windows</li>
+        <li>Getting Started On Linux</li>
+        <li>Choosing Your Sail Services</li>
+        <li>Installation Via Composer</li>
+        <li>Initial Confguration</li>
+      </ul>
+    </div>
+  </div>
+
+
+</body>
+</html>
