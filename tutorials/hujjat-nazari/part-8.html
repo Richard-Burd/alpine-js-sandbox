@@ -1,0 +1,59 @@
+<!-- https://youtu.be/ROZ4DzaJGl4 -->
+<!-- Alpine.js: x-for Loop with Example -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Directives x-model x-text and x-bind</title>
+    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+</head>
+  <body>
+
+    <!-- The x-for must be used in a <template> and it must have one chind, not multiple children -->
+    <div x-data=" { todoList: ['shop', 'record', 'read'] } ">
+      <ul>
+        <template x-for="todo in todoList">
+          <li x-text="todo"></li>
+        </template>
+      </ul>
+    </div>
+
+
+
+
+     <!-- This for loop uses indexing as the 2nd variable input in the <template> tag  -->
+    <div x-data=" { todoList: ['shop', 'record', 'read'] } ">
+      <ul>
+        <template x-for="(todo, index) in todoList">
+          <li x-text="index+1 + ' ' + todo"></li>
+        </template>
+      </ul>
+    </div>
+
+
+
+
+    <!-- This for loop uses indexing as the 2nd variable input in the <template> tag  -->
+    <div x-data=" { title: '', taskings: ['shop', 'record', 'read'] } ">
+
+      <div>
+        <input type="text" x-model="title">
+        <!-- The (title = '') code erases the text in the <input> tag after the <button> is pressed-->
+        <button @click="taskings.push(title); title = '' ">Add todo</button>
+      </div>
+
+      <ul>
+        <template x-for="(todo, index) in taskings">
+          <li x-text="todo" :key="index"></li>
+        </template>
+      </ul>
+    </div>
+
+
+  </body>
+</html>

@@ -1,3 +1,59 @@
-<!-- Left off here: -->
 <!-- https://youtu.be/l5_Y3nlu87Q -->
 <!-- Alpine js Directives: x-model, x-text, x-html, x-bind -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Directives x-model x-text and x-bind</title>
+    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+</head>
+  <body>
+    <div x-data=" { title: '' }">
+      <!-- we bind the <input> below to the x-data above with the value "title" -->
+      <input type="text" x-model="title"> This will repeat what is typed:
+      <span x-text="title">
+      <p x-html="title">
+      </p>
+    </div>
+
+    <br><br><br><br>
+
+    <div x-data=" { myHtmlCode: '' }">
+      <!-- enter in HTML code like "<strong> Hey! and "Hey" will be displayed in bold -->
+      <input type="text" x-model="myHtmlCode"> This will interpret HTML code:
+      <p x-html="myHtmlCode">
+      </p>
+    </div>
+
+     <br><br><br><br>
+
+    <div x-data=" { username: '' }">
+      <!-- Delaying the appearance of the text can be done with methods like -->
+      <!-- "".lazy" or "".debounce" per the docs: https://alpinejs.dev/directives/model -->
+      <input type="text" x-model.lazy="username">
+      <span x-show="username.length > 10">Username too long!!.</span>
+    </div>
+
+    <br><br><br><br>
+
+      <h3>Display Image Here</h3>
+    <div x-data=" { image: '' }">
+      <h4>Paste Image URL</h4>
+      <input type="text" x-model.debounce="image">
+
+      <!-- normal way for entering in a dynamic value "x-bind:" -->
+      <img x-bind:src="image" alt="display image">
+
+      <!-- shorthand for entering in a dynamic value ":" -->
+      <img :src="image" alt="display image">
+
+      <!-- shorthand for entering in a dynamic value ":" -->
+      <!-- see this working by putting this in the third component input: -->
+      <!-- https://i.imgur.com/db3IZaF.jpg -->
+      <img x-show="image != ''" :src="image" alt="display image">
+    </div>
+  </body>
+</html>
