@@ -25,7 +25,9 @@ dynamicUrls.splice(indexIndex, 1)//...........................currently not used
 const fourIndex = dynamicUrls.indexOf("404.html")//...........currently not used
 dynamicUrls.splice(fourIndex, 1)//............................currently not used
 
-
+// NOTE: currently, there is no way to reach the 404.html view if the user types in
+// an incorrect URL; this is the second thing that needs to be added to this server
+// after implementation of the dynamic URL's
 
 // new URL's must be added to this array until the dynamicUrls array abvoe is working:
 let urls = [

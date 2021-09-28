@@ -18,25 +18,22 @@ You should then be able to see the index.html file that looks like this:
 
 ### This Node.js application must be able to do the following in order for me to use Alpine.js on my upcomming projects:
 
+- [ ] The app has a reusable navbar component using Web Components or another means
 - [x] A Node.js server can read and display an index.html file
-- [x] The index.html file contains working Alpine.js components
 - [x] A GitHub repo is established for the application
-- [x] The index.html has a link to an about.html page
-- [x] The about.html page has a link to the index.html page
-- [ ] The info.html page displays Arial Rounded MT font
-- [ ] The accordion.html page has an animated (transitioning) accordion dropdown button
-- [x] The app can display images embedded in an app directory
-- [x] The app can display images from a remote location like imgur.com
+- [x] Page navigation is working
+- [x] Routing is working
 - [x] The app can display both raster (jpg) and vector(svg) images
-- [ ] A Google Sheets file can be iterated on and have a JSON file of it produced
-- [x] The .html files can read a .css file and interpret it
-- [x] An .html file can read a .js file and execute it properly
+- [x] The app renders a favicon
+- [x] The app's .html files are properly reading .css files
+- [x] The app's .html files are properly reading .js files
 - [x] An Alpine.js component can read a JavaScript file and iterate on it
-- [ ] An Alpine.js component can read a JSON file and iterate on it
-- [ ] There is a master list of all references used on a website
+- [ ] The app has pages styled using tailwind-css
+- [ ] The app uses Arial Rounded MT font using tailwind-css and Google Fonts
+- [ ] An dropdown accordion is animated w/tailwind-css + alpine.js transitioning
+- [ ] The server directs a user to the 404.html page when they mis-type a URL
+- [ ] The server can read files & subdirectories in the `./views` folder and dynamically create all necessary `GET` requests for the application
+- [ ] The system used on the UCS website for managing references is implemented here
 - [ ] A component can display selected references that are listed alphabetically
-- [ ] The .css file detects a user's media and gracefully degredates text
-- [ ] The .css file detects a user's media and gracefully degredates an image
-- [ ] A single navbar component appears on all html pages in the app
-- [ ] The navbar has three .html files listed and properly navigates to them
-https://alpinetoolbox.com/examples/navbar
+- [ ] An Alpine.js component can read a JSON file and iterate on it
+- [ ] A Google Sheets file can be iterated on and have a JSON file of it produced
