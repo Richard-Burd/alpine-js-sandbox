@@ -35,7 +35,7 @@ let urls = [
   '/images',
   '/accordion',
   '/myfolder/myview',
-  '/testpage'
+  '/illustrations'
 ];
 
 urls.forEach(function(name) {
