@@ -27,6 +27,16 @@
       <p>Lorem ipsum...</p>
     </div>
 
+    <!-- this is a web component that will eventually become a footer displayed on all pages -->
+    <custom-web-component name="This is the Footer Web Component" avatar="./favicon.ico">
+      <div slot="email">some-other-info@email.com</div>
+      <div slot="phone">867-5309</div>
+    </custom-web-component>
+
+    <!-- NOTE: this script is used for web component header (nav bar) and footer -->
+    <!--  It must be displayed in the </body> and it must be placed below all of the web components -->
+    <script src="./ourWebComponent.js"></script>
+    
   </body>
 </html>
 

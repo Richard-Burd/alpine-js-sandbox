@@ -15,6 +15,12 @@
     </style>
   </head>
   <body>
+    <!-- this is a web component that will eventually become a navbar displayed on all pages -->
+    <custom-web-component name="This is the Nav-Bar (Header) Web Component" avatar="./favicon.ico">
+      <div slot="email">info@email.com</div>
+      <div slot="phone">123-456-7890</div>
+    </custom-web-component>
+
     <h1>About</h1>
     <p>Welcome to the About page</p>
 
@@ -35,6 +41,16 @@
     <nav>
       <h2><a href="/">Homepage</a></h2>
     </nav>
+
+    <!-- this is a web component that will eventually become a footer displayed on all pages -->
+    <custom-web-component name="This is the Footer Web Component" avatar="./favicon.ico">
+      <div slot="email">some-other-info@email.com</div>
+      <div slot="phone">867-5309</div>
+    </custom-web-component>
+
+    <!-- NOTE: this script is used for web component header (nav bar) and footer -->
+    <!--  It must be displayed in the </body> and it must be placed below all of the web components -->
+    <script src="./ourWebComponent.js"></script>
 
   </body>
 </htmsl>

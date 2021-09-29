@@ -1,1 +1,47 @@
-<h1>You are now reading the html file in a subdirectory</h1>
+<!-- Node JS Tutorial for Beginners #17 - Serving HTML Pages -->
+<!-- https://www.youtube.com/watch?v=BBOUfdUZIVo -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Script you need to read alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <style>
+      body{background: #1876b4; font-family: Arial; padding: 30px;}
+      h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center; color: #ceceb3; }
+      h2{font-size: 20px; letter-spacing: 1.5px; text-align: left; color: #ceceb3; }
+      p{font-size: 16px; text-align: center;}
+    </style>
+  </head>
+  <body>
+
+    <!-- this is a web component that will eventually become a navbar displayed on all pages -->
+    <custom-web-component name="This is the Nav-Bar (Header) Web Component" avatar="../favicon.ico">
+      <div slot="email">info@email.com</div> <!-- NOTE: the <<avatar="../favicon.ico">> line above must have two dots ".." since this is located in a subdirectory -->
+      <div slot="phone">123-456-7890</div>
+    </custom-web-component>
+
+    <br><br><br>
+    <h1>You are now reading the html file in a subdirectory</h1>
+    <br><br><br>
+
+    <nav>
+      <h2><a href="/">Home</a></h2>
+      <h2><a href="/about">About page</a></h2>
+      <h2><a href="/images">Images page</a></h2>
+      <h2><a href="/accordion">Accordion page</a></h2>
+    </nav>
+
+    <!-- this is a web component that will eventually become a footer displayed on all pages -->
+    <custom-web-component name="This is the Footer Web Component" avatar="../favicon.ico">
+      <div slot="email">some-other-info@email.com</div> <!-- NOTE: the <<avatar="../favicon.ico">> line above must have two dots ".." since this is located in a subdirectory -->
+      <div slot="phone">867-5309</div>
+    </custom-web-component>
+
+    <!-- NOTE: this script is used for web component header (nav bar) and footer -->
+    <!--  It must be displayed in the </body> and it must be placed below all of the web components -->
+    <script src="../ourWebComponent.js"></script>
+    <!-- NOTE: the <<src="../ourWebComponent.js">> line above must have two dots ".." since this is located in a subdirectory -->
+
+  </body>
+</html>

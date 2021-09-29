@@ -32254,6 +32254,10 @@ video {
 
 /* tailwind directive */
 
+/* What follows are the current, default styling rules */
+
+/* These need to be deletes so that everything on the page uses tailwind */
+
 h3 {
   color: orange;
 }
