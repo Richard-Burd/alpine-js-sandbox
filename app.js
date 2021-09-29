@@ -51,4 +51,5 @@ app.get('/', (req, res) => {
 // listen for Requests
 app.listen(3000);
 
+// this gives the .html files access to the .js & .css files in the public folder
 app.use(express.static(__dirname + '/public'));
