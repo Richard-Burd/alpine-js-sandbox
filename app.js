@@ -8,6 +8,10 @@ const app = express();
 // icon in the browser tab
 app.use('/favicon.ico', express.static('public/favicon.ico'));
 
+// This is necessary in order to get the app running on Heroku
+// https://youtu.be/MxfxiR8TVNU
+let PORT = process.env.PORT || 3000;
+
 // these are used to grab filenames out of the './views' directory
 const fs = require('fs');
 const fileNames = fs.readdirSync('views');
@@ -50,7 +54,7 @@ app.get('/', (req, res) => {
 });
 
 // listen for Requests
-app.listen(3000);
+app.listen(PORT);
 
 // this gives the .html files access to the .js & .css files in the public folder
 app.use(express.static(__dirname + '/public'));
