@@ -14,7 +14,11 @@ Node.js, NVM, and NPM are required
 
 You should then be able to see the index.html file that looks like this:
 
-![](https://i.imgur.com/kT58nm3.jpg)
+[
+![image of the app's homepage](https://i.imgur.com/kT58nm3.jpg)
+](https://burd-test-1.herokuapp.com)
+
+The app is deployed [here](https://burd-test-1.herokuapp.com) on Heroku.
 
 ### This Node.js application must be able to do the following in order for me to use Alpine.js on my upcomming projects:
 
