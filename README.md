@@ -59,14 +59,14 @@ alpine-js-sandbox
 │   │   ├── alpinejs.jpg
 │   │   └── alpinejs.svg
 │   ├── favicon.ico
-│   ├── ourWebComponent.js
+│   ├── ourWebComponent.js (this is the Web Component)
 │   ├── scripts.js
 │   └── styles.css (devs don't edit this, it is created by Tailwind.CSS)
 ├── resources (this is depricated and scheduled to be deleted)
 ├── src
 │   └── styles.css (devs edit this file then run "$npm run build-css" to run Tailwind-CSS)
 ├── test-servers (depricated earlier versions of the server [now called: "app.js"])
-├── torials these have nothing to do with the project, they are Alpine.js YouTube tutorials
+├── tutorials (these have nothing to do with the project, they are Alpine.js YouTube tutorials)
 ├── views (the app.js server goes into this folder and serves up everything in here)
 │   ├── myfolder
 │   │   └── myview.html (this is to ensure nested .html files will be read by the server)
