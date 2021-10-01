@@ -47,6 +47,7 @@ Node.js, NVM, and NPM are required
 - [ ] An Alpine.js component can read a JSON file and iterate on it
 - [ ] A Google Sheets file can be iterated on and have a JSON file of it produced
 
+
 ## Project File Structure
 ```
 alpine-js-sandbox
