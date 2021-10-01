@@ -7,6 +7,7 @@ const template = document.createElement('template');
 
 // here we define the template using HTML and (embedded) CSS
 template.innerHTML = `
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <style>
     /* Tailwind-CSS cannot style web components, so we will style them here */
     /* https://dev.to/43081j/using-tailwind-at-run-time-with-web-components-47c */
@@ -35,11 +36,11 @@ template.innerHTML = `
       <h3></h3>
 
       <div class="info">
-        <p><slot name="email" /></p>
-        <p><slot name="phone" /></p>
+        <p class="transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110" ><slot name="email" /></p>
+        <p class="transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110" ><slot name="phone" /></p>
       </div>
     </div>
-    <button id="toggle-info">Hide Info</button>
+    <button id="toggle-info">Click me to hide Info</button>
   </div>
 `
 
@@ -82,7 +83,7 @@ class ACoolWebComponent extends HTMLElement {
       toggleBtn.innerText = 'Hide Info';
     } else {
       info.style.display = 'none'; // we don't want to see the info
-      toggleBtn.innerText = 'Show Info'; // we want the button to revert to original text
+      toggleBtn.innerText = 'Click me to show Info'; // we want the button to revert to original text
     }
   }
 

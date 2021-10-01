@@ -1,24 +1,27 @@
 # alpine-js-sandbox
-I am planning to use Alpine.js to build out two new static sites but before I do that, I want to make sure I can do everything I need to do for those projects, so I will build out that functionality here, seperate from the projects.
+This static site uses the following:
+1. **Node.js** - runtime environment
+2. **Express.js** - node module for routing of different paths & resources in the URI
+3. **Tailwind-CSS** - node module/CDN for styling
+4. **Alpine.js** - node module/CDN framework for implelenting JavaScript logic in HTML files
+5. **Web Components** - feature for implementing reusable components (s.thing Alpine.js can't do)
 
-### Requirements:
+### Availability
+
+The app is deployed [here](https://burd-test-1.herokuapp.com) on Heroku.
+
+---
+### Install Requirements:
 
 Node.js, NVM, and NPM are required
 
+---
 ### Installation instructions (Ubuntu):
 
 1. run: `npm install` to install the alpine.js and express.js node modules
 2. run: `npm start` to boot up the application
 3. If you make changes to src/styles.css, run: `npm run build-css` so tailwind-css updates the public/styles.css file.
 4. To create a tailwind.config file, run: `npx tailwindcss init --full` - this is if you need to customize Tailwind-CSS
-
-You should then be able to see the index.html file that looks like this:
-
-[
-![image of the app's homepage](https://i.imgur.com/kT58nm3.jpg)
-](https://burd-test-1.herokuapp.com)
-
-The app is deployed [here](https://burd-test-1.herokuapp.com) on Heroku.
 
 ### This Node.js application must be able to do the following in order for me to use Alpine.js on my upcomming projects:
 
@@ -43,3 +46,39 @@ The app is deployed [here](https://burd-test-1.herokuapp.com) on Heroku.
 - [ ] A component can display selected references that are listed alphabetically
 - [ ] An Alpine.js component can read a JSON file and iterate on it
 - [ ] A Google Sheets file can be iterated on and have a JSON file of it produced
+
+## Project File Structure
+```
+alpine-js-sandbox
+├── backend
+│   ├── endeavors.json
+│   └── test.json
+├── public
+│   ├── images
+│   │   ├── alpinejs.jpg
+│   │   └── alpinejs.svg
+│   ├── favicon.ico
+│   ├── ourWebComponent.js
+│   ├── scripts.js
+│   └── styles.css (devs don't edit this, it is created by Tailwind.CSS)
+├── resources (this is depricated and scheduled to be deleted)
+├── src
+│   └── styles.css (devs edit this file then run "$npm run build-css" to run Tailwind-CSS)
+├── test-servers (depricated earlier versions of the server [now called: "app.js"])
+├── torials these have nothing to do with the project, they are Alpine.js YouTube tutorials
+├── views (the app.js server goes into this folder and serves up everything in here)
+│   ├── myfolder
+│   │   └── myview.html (this is to ensure nested .html files will be read by the server)
+│   ├── 404.html (user shoud be served this if they go to a URI that does not exist)
+│   ├── about.html
+│   ├── accordion.html
+│   ├── illustrations.html
+│   ├── images.html
+│   └── index.html
+├── app.js (this is the all-important server using Express.js for routing)
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── Procfile
+└── README.md
+```
