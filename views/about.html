@@ -7,6 +7,11 @@
     <!-- Script you need to read alpine.js -->
     <script src="//unpkg.com/alpinejs" defer></script>
 
+    <!-- internal css file -->
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+
+
+
     <style>
       body{background:  #4b883c ; font-family: Arial; color: #ceceb3; padding: 30px;}
       h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
@@ -21,7 +26,7 @@
       <div slot="phone">123-456-7890</div>
     </custom-web-component>
 
-    <h1>About</h1>
+    <h1 class="transition duration-500 ease-in-out font-bold uppercase p-4 border-b border-gray-100 hover:text-black">About</h1>
     <p>Welcome to the About page</p>
 
 
@@ -40,9 +45,8 @@
 
     <nav>
       <h2><a href="/">Home page</a></h2>
-      <h2><a href="/images">Images page</a></h2>
       <h2><a href="/accordion">Accordion page</a></h2>
-      <h2><a href="/illustrations">"Illustrations Page" - a copy of the Images page that has working web components</a></h2>
+      <h2><a href="/illustrations">Illustrations Page</a></h2>
       <h2><a href="/myfolder/myview">Page located in a subdirectory</a></h2>
 
     <!-- this is a web component that will eventually become a footer displayed on all pages -->
