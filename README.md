@@ -25,7 +25,6 @@ Node.js, NVM, and NPM are required
 
 ### This Node.js application must be able to do the following in order for me to use Alpine.js on my upcomming projects:
 
-- [x] The bug with './images.html' is fixed so that web components display on it properly (or the problem with this file's naming convention is discovered) - './illustrations.html' is an exact copy that works just fine; the current theory is that there cannot be a file in the './public' directory that has the same name as a folder in the './views' directory because the app.js (router) file runs the `app.use(express.static(__dirname + '/public'));` line and this may create an `images` reference overlap.
 - [ ] Each .html file includes the internal & external <script> & <link> tags so that both Ailpine.js and Tailwind-CSS can be used as node modules or reference the internet so that the only node module required for the workspace is Express.js
 - [x] The app has a reusable navbar component using Web Components or another means
 - [x] A Node.js server can read and display an index.html file
@@ -77,7 +76,6 @@ alpine-js-sandbox
 │   ├── about.html
 │   ├── accordion.html
 │   ├── illustrations.html
-│   ├── images.html
 │   └── index.html
 ├── app.js (this is the all-important server using Express.js for routing)
 ├── LICENSE
