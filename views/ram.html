@@ -1,0 +1,71 @@
+<!-- https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ -->
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Script you need to read alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <!-- internal css file -->
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <style>
+      img[name~="first"]{
+        opacity: 0; /* start with no opacity */
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 0s; /* delay the onset of the opaque image transition */
+      }
+      img[name~="second"]{
+        opacity: 0; /* start with no opacity */
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s; /* delay the onset of the opaque image transition */
+      }
+      img[name~="third"]{
+        opacity: 0; /* start with no opacity */
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 1s; /* delay the onset of the opaque image transition */
+      }
+      img[name~="forth"]{
+        opacity: 0; /* start with no opacity */
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s; /* delay the onset of the opaque image transition */
+      }
+      img[name~="fifth"]{
+        opacity: 0; /* start with no opacity */
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 2s; /* delay the onset of the opaque image transition */
+      }
+      @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="m-4 transition duration-500 ease-in-out font-bold uppercase p-4 border-b border-gray-100 hover:text-blue-700">RAM Logo Demonstration</h1>
+    <h2 class="mx-4">hover over the title above and it should turn blue if Tailwind-CSS is working properly.</h2>
+    <h2 class="mx-4">Below we should see a rough-draft animation John described for how the logo should appear.</h2>
+    <h2 class="mx-4">First the earth should appear, then the U.S., then Tennessee, then the RAM Title at the bottom.</h2>
+    <div class="m-4">
+      <img class="absolute w-2/4" src="/images/ramlogo/1.jpg" name="first" alt="earth">
+      <img class="absolute w-2/4" src="/images/ramlogo/2.jpg" name="second" alt="earth">
+      <img class="absolute w-2/4" src="/images/ramlogo/3.jpg" name="third" alt="earth">
+      <img class="absolute w-2/4" src="/images/ramlogo/4.jpg" name="forth" alt="earth">
+      <img class="absolute w-2/4" src="/images/ramlogo/5.jpg" name="fifth" alt="earth">
+    </div>
+    <!-- <img class="absolute w-2/4" src="/images/ramlogo/2.jpg" alt="u.s."> -->
+  </body>
+</html>

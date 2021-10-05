@@ -25,6 +25,7 @@ Node.js, NVM, and NPM are required
 
 ### This Node.js application must be able to do the following in order for me to use Alpine.js on my upcomming projects:
 
+- [ ] The RAM logo can cascade into appearance as John described using Tailwind-CSS.
 - [ ] Each .html file includes the internal & external <script> & <link> tags so that both Ailpine.js and Tailwind-CSS can be used as node modules or reference the internet so that the only node module required for the workspace is Express.js
 - [x] The app has a reusable navbar component using Web Components or another means
 - [x] A Node.js server can read and display an index.html file
