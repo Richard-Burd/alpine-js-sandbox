@@ -1,5 +1,8 @@
 /* https://tailwindcss.com/docs/installation */
-/* test note to see if compiler is working properly */
+/* https://youtu.be/bxmDnn7lrnk?t=559 */
+
+/* imports the base functionality per Tailwind-css docs */
+/* https://tailwindcss.com/docs/installation */
 @tailwind base;        /* tailwind directive */
 @tailwind components;  /* tailwind directive */
 @tailwind utilities;   /* tailwind directive */

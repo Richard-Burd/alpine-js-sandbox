@@ -7,15 +7,17 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 
 
-    <!-- Internal JavaScript -->
-    <!-- <script type="text/javascript" src="/scripts.js"></script> -->
 
-    <!-- internal css file -->
-    <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css">
+    <!-- internal css files NOTE: you cann use both of these at the same time or -->
+    <!-- Heroku will not compile the application properly -->
+    <!-- <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css"> -->
     <link rel="stylesheet" type="text/css" href="./custom-styles/mystyles.css">
-    
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+
+    <!-- NOTE: You can use this external tailwind-link with the internal custom css file(s) above -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+
 
     <!-- internal JavaScript file -->
     <script src="scripts/scripts.js"></script>

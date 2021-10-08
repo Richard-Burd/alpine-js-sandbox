@@ -7,9 +7,17 @@
     <!-- Script you need to read alpine.js -->
     <script src="//unpkg.com/alpinejs" defer></script>
 
-    <!-- internal css file -->
-    <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css">
-    <link rel="stylesheet" type="text/css" href="./custom-styles/mystyles.css">
+
+
+
+        <!-- internal css files NOTE: you cann use both of these at the same time or -->
+        <!-- Heroku will not compile the application properly -->
+        <!-- <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css"> -->
+        <link rel="stylesheet" type="text/css" href="./custom-styles/mystyles.css">
+
+        <!-- NOTE: You can use this external tailwind-link with the internal custom css file(s) above -->
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 
 
 
