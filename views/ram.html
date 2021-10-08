@@ -7,7 +7,9 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 
     <!-- internal css file -->
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css"> -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
     <style>
       img[name~="first"]{
         opacity: 0; /* start with no opacity */
@@ -55,16 +57,14 @@
     </style>
   </head>
   <body>
-    <h1 class="m-4 transition duration-500 ease-in-out font-bold uppercase p-4 border-b border-gray-100 hover:text-blue-700">RAM Logo Demonstration</h1>
-    <h2 class="mx-4">hover over the title above and it should turn blue if Tailwind-CSS is working properly.</h2>
-    <h2 class="mx-4">Below we should see a rough-draft animation John described for how the logo should appear.</h2>
-    <h2 class="mx-4">First the earth should appear, then the U.S., then Tennessee, then the RAM Title at the bottom.</h2>
+    <h1 class="sm:text-5xl md:text-4xl lg:text-xl m-4 transition duration-500 ease-in-out font-bold uppercase p-4 border-b border-gray-100 hover:text-blue-700">RAM Logo Demonstration</h1>
+    <p class="m-4 text-gray-600 text-xl">hover over the title above and it should turn blue if Tailwind-CSS is working properly.&nbsp;Below we should see a rough-draft animation John described for how the logo should appear.&nbsp; First the earth should appear, then the U.S., then Tennessee, then the RAM Title at the bottom.</p>
     <div class="m-4">
-      <img class="absolute w-2/4" src="/images/ramlogo/1.jpg" name="first" alt="earth">
-      <img class="absolute w-2/4" src="/images/ramlogo/2.jpg" name="second" alt="earth">
-      <img class="absolute w-2/4" src="/images/ramlogo/3.jpg" name="third" alt="earth">
-      <img class="absolute w-2/4" src="/images/ramlogo/4.jpg" name="forth" alt="earth">
-      <img class="absolute w-2/4" src="/images/ramlogo/5.jpg" name="fifth" alt="earth">
+      <img class="absolute md:max-w-screen-sm" src="/images/ramlogo/1.jpg" name="first" alt="earth">
+      <img class="absolute md:max-w-screen-sm" src="/images/ramlogo/2.jpg" name="second" alt="earth">
+      <img class="absolute md:max-w-screen-sm" src="/images/ramlogo/3.jpg" name="third" alt="earth">
+      <img class="absolute md:max-w-screen-sm" src="/images/ramlogo/4.jpg" name="forth" alt="earth">
+      <img class="absolute md:max-w-screen-sm" src="/images/ramlogo/5.jpg" name="fifth" alt="earth">
     </div>
     <!-- <img class="absolute w-2/4" src="/images/ramlogo/2.jpg" alt="u.s."> -->
   </body>

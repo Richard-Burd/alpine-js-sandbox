@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "build-css": "tailwindcss -i src/styles.css -o public/styles.css"
+    "build-css": "tailwindcss -i src/styles.css -o public/tailwind-css/styles.css"
   },
   "repository": {
     "type": "git",
