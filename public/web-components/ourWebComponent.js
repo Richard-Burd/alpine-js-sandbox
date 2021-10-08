@@ -17,7 +17,8 @@ template.innerHTML = `
     }
 
     h3 {
-      color: rgb(85, 122, 159);
+      font-weight: bold;
+      color: rgb(55, 87, 70);
     }
 
     h3:hover {
@@ -40,7 +41,7 @@ template.innerHTML = `
         <p class="transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110" ><slot name="phone" /></p>
       </div>
     </div>
-    <button id="toggle-info">Click me to hide Info</button>
+    <button class="rounded-full m-2 px-2 py-1 bg-yellow-400 text-yellow-900" id="toggle-info">Click me to hide Info</button>
   </div>
 `
 
