@@ -9,8 +9,6 @@ const template = document.createElement('template');
 template.innerHTML = `
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    /* Tailwind-CSS cannot style web components, so we will style them here */
-    /* https://dev.to/43081j/using-tailwind-at-run-time-with-web-components-47c */
     /* this styling will not effect elements on the DOM outside of this component */
     .custom-web-component {
       background-color: rgba(255, 255, 255, 0.3);

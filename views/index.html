@@ -46,13 +46,24 @@
     <p><h3>This H3 text should be orange and styled by the mystyles.css file in the '/public/custom-styles' directory</h3></p>
 
     <!-- Button that hides & shows a div w/alpine.js component -->
-    <div x-data="{isShowing: false}">
+    <div class="bg-white bg-opacity-10" x-data="{isShowing: false}">
       <button class="rounded-full m-2 px-2 py-1 bg-yellow-400 text-yellow-900" x-data x-on:click="isShowing = !isShowing">
         Alpine.js Component Button
       </button>
 
       <div x-show="isShowing">
-        <h2>i am content that should dissappear and reappear via the Alpine.js framework every time you click the button above!</h2>
+        <h2>i am content that should dissappear and reappear via the Alpine.js framework every time you click the button above!  I also contain a fully-functional web component inside me</h2>
+
+        <!-- this is a web component inside of a web component -->
+        <custom-web-component name="This is the Nav-Bar (Header) Web Component" avatar="./favicon.ico">
+          <div slot="email">I am a web component inside an Alpine.js component</div>
+          <div slot="phone">If I am working properly, you should be able to show & hide me with the button below</div>
+        </custom-web-component>
+
+
+
+
+
       </div>
     </div>
 
