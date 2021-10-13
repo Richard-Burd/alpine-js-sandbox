@@ -5,6 +5,10 @@ const express = require('express');
 // express app is created
 const app = express();
 
+// https://stackoverflow.com/questions/15463199/how-to-set-custom-favicon-in-express
+// "...No extra middlewares required. Just use:"
+app.use('/favicon.ico', express.static('public/favicon.ico'));
+
 // This is necessary in order to get the app running on Heroku
 // https://youtu.be/MxfxiR8TVNU
 let PORT = process.env.PORT || 3000;
