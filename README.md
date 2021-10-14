@@ -20,7 +20,7 @@ Node.js, NVM, and NPM are required
 
 1. run: `npm install` to install the alpine.js and express.js node modules
 2. run: `npm start` to boot up the application
-3. If you make changes to src/styles.css, run: `npm run build-css` so tailwind-css updates the public/styles.css file.
+3. If you make changes to src/styles.css, run: `npm run build-css:dev` so tailwind-css updates the public/styles.css file.
 4. To create a tailwind.config file, run: `npx tailwindcss init --full` - this is if you need to customize Tailwind-CSS
 
 ### This Node.js application must be able to do the following in order for me to use Alpine.js on my upcomming projects:
@@ -83,5 +83,6 @@ alpine-js-sandbox
 ├── package-lock.json
 ├── package.json
 ├── Procfile
+├── tailwind.config.js
 └── README.md
 ```

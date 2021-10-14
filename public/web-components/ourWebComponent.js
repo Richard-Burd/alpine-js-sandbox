@@ -7,6 +7,9 @@ const template = document.createElement('template');
 
 // here we define the template using HTML and (embedded) CSS
 template.innerHTML = `
+  <!-- because of the way web components work, you can't use the native build of tailwind here -->
+  <!-- ...therefore web components are slow; they are inefficient because they don't "pull-in" outside resources well -->
+  <!-- ...this is why it is better to use express.js partialsor an express template language of some other sort -->
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <style>
     /* this styling will not effect elements on the DOM outside of this component */

@@ -40,11 +40,11 @@
 
     <h1 class="transition duration-500 ease-in-out font-bold uppercase p-4 border-b border-gray-100 hover:text-black">About</h1>
     <p>Welcome to the About page</p>
-
+    <h3>This H3 Text is orange because it is styled in the <b class="text-yellow-900">./public/custom-styles/mystyles.css</b> file; it is only possible to use this custom file because this ./About page is importing tailwind-csss via an offsite CDN link</h3>
 
     <!-- Button that hides & shows a div w/alpine.js component -->
-    <div x-data="{isShowing: false}">
-      <button x-data x-on:click="isShowing = !isShowing">
+    <div class="bg-white bg-opacity-10" x-data="{isShowing: false}">
+      <button class="rounded-full m-2 px-2 py-1 bg-yellow-400 text-yellow-900" id="toggle-info" x-data x-on:click="isShowing = !isShowing">
         Alpine.js Component Button
       </button>
 
