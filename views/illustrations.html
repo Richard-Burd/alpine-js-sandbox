@@ -1,6 +1,7 @@
 <!-- Node JS Tutorial for Beginners #17 - Serving HTML Pages -->
 <!-- https://www.youtube.com/watch?v=BBOUfdUZIVo -->
 <!DOCTYPE html>
+<html lang="en">
 <html>
   <head>
 
@@ -56,6 +57,17 @@
         <p>This svg image is stored in this app at: /public/images/alpinejs.svg</p>
         <img src="/images/alpinejs.svg" alt="an alpine.js (.svg file) logo stored natively inside the app">
       </div>
+      <div class="">
+      <br><br>
+        <p>This is an embedded PDF file:</p>
+        <div class="hidden sm:block">
+          <embed src="/documents/kardeshev.pdf" width="850" height="1040">
+        </div>
+        <div class="sm:hidden">
+          <iframe src="/documents/kardeshev.pdf" width="auto" height="auto"> </iframe>
+        </div>
+      </div>
+      <br><br>
     </div>
 
     <!-- this is a web component that will eventually become a footer displayed on all pages -->
