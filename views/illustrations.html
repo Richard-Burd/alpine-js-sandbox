@@ -59,13 +59,20 @@
       </div>
       <div class="">
       <br><br>
-        <p>This is an embedded PDF file:</p>
         <div class="hidden sm:block">
+          <p>This is an embedded PDF file for desktop:</p>
           <embed src="/documents/kardeshev.pdf" width="850" height="1040">
         </div>
         <div class="sm:hidden">
+          <p>this is an iframe embedded PDF for mobile:</p>
           <iframe src="/documents/kardeshev.pdf" width="auto" height="auto"> </iframe>
         </div>
+        <br>
+        <div class="sm:hidden">
+          <p>this is a regular embedded PDF for mobile:</p>
+          <embed src="/documents/kardeshev.pdf" width="auto" height="auto"> </embed>
+        </div>
+        <br>
       </div>
       <br><br>
     </div>
