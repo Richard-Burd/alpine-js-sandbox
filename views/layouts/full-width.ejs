@@ -1,0 +1,33 @@
+<!DOCTYPE html> <!-- https://youtu.be/lYVKbAn5Od0?t=1269 -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- NOTE: this layout does not need the tailwind CSS link in order to work-->
+    <!-- <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css"> -->
+    <title>The Layout</title>
+  </head>
+  <style>
+    .custom-header {
+      background-color: white;
+      padding: 20px;
+      margin: 20px
+    };
+
+    .custom-styles {
+      font-weight: bold;
+      color: rgb(55, 87, 70);
+    }
+    .custom-styles:hover {
+      color: red;
+      transition: 2s;
+    }
+  </style>
+  <body>
+    <p class="font-bold uppercase custom-header custom-styles">This is the full-width.ejs file in the '/views/layouts' directory</p>
+      <%- include('../partials/header.ejs') %>
+      <main><%- body %></main>
+    <p class="transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110">This is the full-width.ejs file in the '/views/layouts' directory</p>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
