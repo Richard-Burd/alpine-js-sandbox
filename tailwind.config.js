@@ -8,7 +8,10 @@ module.exports = {
   // Tailwind will see what classes aren't being used and "purge" them; this is so that when you go to
   // Google Dev tools > Network > Filter: CSS - you will see a much smaller .css file loading up vs.
   // the 5MB .css file from unpkg
-  purge: ["./views/**/*.html"], // this is called "globing" (the ** recursively searches for the files)
+
+  // purge multiple file types
+  // https://fromzerotofullstack.com/v/setting-up-tailwind-to-avoid-big-file-sizes/
+  purge: ["./views/**/*.html", "./views/**/*.ejs"], // this is called "globing" (the ** recursively searches for the files)
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},

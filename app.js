@@ -38,12 +38,8 @@ app.set('layout', './layouts/full-width')
 
 app.set('view engine', 'ejs')
 
-app.get('', (req, res) => {
-  res.render('index.ejs')
-})
-
-app.get('/about', (req, res) => {
-  res.render('about.ejs')
+app.get('/layout-n-partials', (req, res) => {
+  res.render('layout-n-partials.ejs')
 })
 
 // https://stackoverflow.com/questions/16534545/how-to-get-rid-of-html-extension-when-serving-webpages-with-node-js
