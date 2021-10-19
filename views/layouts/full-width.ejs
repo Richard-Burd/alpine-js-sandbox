@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Script you need to read alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
     <!-- NOTE: the layout must have this link in order for tailwind to work on the partials, but the layout cannot be styled with tailwind -->
     <link rel="stylesheet" type="text/css" href="..public/tailwind-css/styles.css">
     <title>The Layout</title>
@@ -14,19 +18,18 @@
       transition: 1s;
     }
     .custom-styles {
-      background-color: rgb(222, 250, 212);
+      background-color: rgb(201, 201, 201);
       padding: 20px;
       margin: 20px;
-      font-weight: bold;
-      color: rgb(109, 117, 89);
+      color: rgb(64, 64, 64);
       text-align: center
     };
   </style>
   <body>
-    <p class="custom-styles uppercase">This is the full-width.ejs file in the '/views/layouts' directory w/non-tailwind styling the hovering effects + tailwind uppercase</p>
+    <p class="custom-styles italic tracking-wider">This is the first line of text in the <strong>full-width.ejs</strong> file in the <strong>'/views/layouts'</strong> directory w/non-tailwind styling the hovering effects + tailwind italics & wide tracking</p>
       <%- include('../partials/navbar.ejs') %>
       <main><%- body %></main>
-    <p class="custom-styles uppercase">This is the full-width.ejs file in the '/views/layouts' directory w/non-tailwind styling the hovering effects + tailwind uppercase</p>
+    <p class="custom-styles italic tracking-wider">This is the second line of text in the <strong>full-width.ejs</strong> file in the <strong>'/views/layouts'</strong> directory w/non-tailwind styling the hovering effects + tailwind italics & wide tracking</p>
     <%- include('../partials/footer.ejs') %>
   </body>
 </html>
