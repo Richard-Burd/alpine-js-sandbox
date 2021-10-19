@@ -26,7 +26,7 @@ Node.js, NVM, and NPM are required
 ### This Node.js application must be able to do the following in order for me to use Alpine.js on my upcomming projects:
 
 - [x] The RAM logo can cascade into appearance as John described.
-- [ ] Each .html file includes the internal & external <script> & <link> tags so that both Ailpine.js and Tailwind-CSS can be used as node modules or reference the internet so that the only node module required for the workspace is Express.js
+- [x] Each .html file includes the internal & external <script> & <link> tags so that both Ailpine.js and Tailwind-CSS can be used as node modules or reference the internet so that the only node module required for the workspace is Express.js
 - [x] The app has a reusable navbar component using Web Components or another means
 - [x] A Node.js server can read and display an index.html file
 - [x] A GitHub repo is established for the application
@@ -37,11 +37,11 @@ Node.js, NVM, and NPM are required
 - [x] The app's .html files are properly reading .css files
 - [x] The app's .html files are properly reading .js files
 - [x] An Alpine.js component can read a JavaScript file and iterate on it
-- [ ] The app has pages styled using tailwind-css
-- [ ] The app uses Arial Rounded MT font using tailwind-css and Google Fonts
-- [ ] An dropdown accordion is animated w/tailwind-css + alpine.js transitioning
+- [x] The app has pages styled using tailwind-css
+- [x] The app can render Arial Rounded MT Bold font
 - [x] The server directs a user to the 404.html page when they mis-type a URL
 - [x] The server can read files & subdirectories in the `./views` folder and dynamically create all necessary `GET` requests for the application
+- [x] A dropdown accordion capable of mimicing those on the UCS ./about page is working properly in an .ejs file
 - [ ] The system used on the UCS website for managing references is implemented here
 - [ ] A component can display selected references that are listed alphabetically
 - [ ] An Alpine.js component can read a JSON file and iterate on it

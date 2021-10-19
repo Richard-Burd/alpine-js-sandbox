@@ -11,10 +11,17 @@
 
     <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css">
     <title>layout-n-partials</title>
+    <style>
+      /* https://www.cdnfonts.com/arial-rounded-mt-bold.font */
+      @import url('http://fonts.cdnfonts.com/css/arial-rounded-mt-bold');
+      .UCS-fav-font {
+        font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
+      }
+    </style>
   </head>
   <body>
     <div class="bg-gray-200 m-5 p-4">
-      <h4 class="transition duration-500 font-bold ease-in-out hover:text-red-900 hover:bg-red-400 uppercase bg-gray-400 p-2">This text should be uppercase and change to red when you hover on it if tailwind is working properly</h4>
+      <h4 class="UCS-fav-font transition duration-500 ease-in-out hover:text-red-900 hover:bg-red-400 bg-gray-400 p-2">This text should be Arial Rounded MT Bold, which is the favorite font for titles found inside the UCS website; it should change to red when you hover on it if tailwind is working properly</h4>
       <h3 class="text-xl">This is the <strong class="font-mono">layoutsandpartials.ejs</strong> file wrapped in the <strong class="font-mono">./layouts/full-width.ejs</strong> layout</h3>
       <h3>it behaves much like an HTML file, but uses Express.js</h3>
       <div class="m-4 p-4 text-justify">
@@ -61,6 +68,8 @@
           <ul class="m-4 p-4 text-yellow-900"
             x-show="open"
             @click.away="open = false"
+            x-transition.duration.1000ms
+            x-transition:leave.scale.20
           >
             I am just another example. but I have better (i.e. <i>simpler</i>) syntax...I also have hover styling and a web component inside of me below!
 
@@ -85,16 +94,23 @@
           </div>
         </div>
 
-        <br>
+        <br><br><br>
 
 
         <!-- this is a web component  -->
-        <custom-web-component name="This is a Web Component, it requires less back-end code than Express.js layouts & partials, but it must be inserted onto each .html & .egs file in which it occurs; in contrast, the Express.js layouts & partials (.ejs files) are only defined once and that's it." avatar="./images/web-components.svg">
-          <div class="text-gray-900" slot="homepage"><a href="https://www.webcomponents.org/">Click here to learn all about web components and why they are useful</a></div>
-          <div class="text-gray-900" slot="resources"><a href="https://youtu.be/PCWaFLy3VUo">Click here to watch the tutorial video that was used to create this web component</a></div>
-        </custom-web-component>
+        <div class="bg-green-300">
+          <custom-web-component name="This is a Web Component, it requires less back-end code than Express.js layouts & partials, but it must be inserted onto each .html & .egs file in which it occurs; in contrast, the Express.js layouts & partials (.ejs files) are only defined once and that's it." avatar="./images/web-components.svg">
+            <div class="text-gray-900" slot="homepage"><a href="https://www.webcomponents.org/">Click here to learn all about web components and why they are useful</a></div>
+            <div class="text-gray-900" slot="resources"><a href="https://youtu.be/PCWaFLy3VUo">Click here to watch the tutorial video that was used to create this web component</a></div>
+          </custom-web-component>
+        </div>
 
         <script src="./web-components/ourWebComponent.js"></script>
+
+        <br><br><br>
+
+        <!-- This is a pair of dropdown accordions built with raw HTML and CSS -->
+        <%- include('./partials/pureaccordion.ejs') %>
 
       </div>
       <h3 class="text-xl">This is the very bottom of the <strong>layoutsandpartials.ejs</strong> file wrapped in the <strong>./layouts/full-width.ejs</strong> layout</h3>
