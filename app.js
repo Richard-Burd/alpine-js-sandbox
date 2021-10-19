@@ -42,6 +42,10 @@ app.set('view engine', 'ejs')
 app.get('/layoutandpartials', (req, res) => {
   res.render('layoutandpartials.ejs')
 });
+// NOTE: We want to get rid of this too, be we also want to have nested URL/URI's in our website
+app.get('/myfolder/nested', (req, res) => {
+  res.render('myfolder/nested.ejs')
+});
 
 // https://stackoverflow.com/questions/16534545/how-to-get-rid-of-html-extension-when-serving-webpages-with-node-js
 // https://youtu.be/SccSCuHhOw0?t=1735

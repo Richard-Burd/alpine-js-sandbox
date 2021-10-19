@@ -30,7 +30,7 @@ template.innerHTML = `
   <div class='custom-web-component'>
 
     <!-- this is fed the 'avatar' from the "getAttribute('avatar') line in the class below -->
-    <img />
+    <img class="w-10" />
 
     <div>
 
@@ -38,11 +38,11 @@ template.innerHTML = `
       <h3></h3>
 
       <div class="info">
-        <p class="transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110" ><slot name="email" /></p>
-        <p class="transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110" ><slot name="phone" /></p>
+        <p class="transition duration-500 ease-in-out bg-blue-300 hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110" ><slot name="homepage" /></p>
+        <p class="transition duration-500 ease-in-out bg-blue-300 hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110" ><slot name="resources" /></p>
       </div>
     </div>
-    <button class="rounded-full m-2 px-2 py-1 bg-yellow-400 text-yellow-900" id="toggle-info">Click me to hide Info</button>
+    <button class="rounded-full m-2 px-2 py-1 bg-green-400 text-green-900" id="toggle-info">Click me to hide Info</button>
   </div>
 `
 

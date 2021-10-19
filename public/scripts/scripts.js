@@ -2,7 +2,7 @@
 myArray = ["cat", "dog", "bird"]
 
 // currently, the accordion.html page displays this
-myString = "If you see this text, it's a string in the scripts.js file"
+myString = "If you see this text, it's a string in a file located in this path: './public/scripts/scripts.js'"
 
 // All code below is for the accordion page
 // https://www.w3schools.com/howto/howto_js_accordion.asp

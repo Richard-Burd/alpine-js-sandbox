@@ -17,13 +17,15 @@
       <h4 class="transition duration-500 font-bold ease-in-out hover:text-red-900 hover:bg-red-400 uppercase bg-gray-400 p-2">This text should be uppercase and change to red when you hover on it if tailwind is working properly</h4>
       <h3 class="text-xl">This is the <strong class="font-mono">layoutsandpartials.ejs</strong> file wrapped in the <strong class="font-mono">./layouts/full-width.ejs</strong> layout</h3>
       <h3>it behaves much like an HTML file, but uses Express.js</h3>
-      <div class="m-4 p-4">
+      <div class="m-4 p-4 text-justify">
         <p>
           <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 
           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
         </p>
+        <br>
+        <h2 class="rounded m-2 px-2 py-1 bg-purple-400 text-purple-900"><a href="/myfolder/nested">Click here to see the navbar displayed with a layout & partials located in a subdirectory (.egs)</a></h2>
         <br>
         <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
@@ -52,7 +54,7 @@
         <br>
 
         <!-- https://www.codegrepper.com/code-examples/javascript/alpine+js+ejs -->
-        <!-- This Alpine.js component works, but the one above doesn't -->
+        <!-- This Alpine.js component works too, but has simpler syntax -->
         <div class="bg-yellow-100" x-data="{ open: false }">
           <button class="rounded-full m-2 px-2 py-1 bg-yellow-400 text-yellow-900 transition duration-500 ease-in-out hover:bg-yellow-600 hover:text-white" @click="open = true">Another Alpine.js Component Button</button>
 
@@ -62,10 +64,10 @@
           >
             I am just another example. but I have better (i.e. <i>simpler</i>) syntax...I also have hover styling and a web component inside of me below!
 
-            <!-- this is a web component embedded in an Alpine.js component inside an .egs file inside another (full-width.ejs) .ejs file -->
-            <custom-web-component class="text-black" name="This is the Nav-Bar (Header) Web Component" avatar="./favicon.ico">
-              <div slot="email">info@email.com: my background is blue but when you hover over me i should turn red</div>
-              <div slot="phone">123-456-7890: this color changing is controlled in the './public/ourWebComponent.js' file</div>
+            <!-- this is a web component inside of an Alpine.js component -->
+            <custom-web-component name="This is a Web Component, it requires less back-end code than Express.js layouts & partials, but it must be types out each time it occurs in the .html & .egs files" avatar="./images/web-components.svg">
+              <div class="text-gray-900" slot="homepage"><a href="https://www.webcomponents.org/">Clike here to learn all about web components and why they are useful</a></div>
+              <div class="text-gray-900" slot="resources"><a href="https://youtu.be/PCWaFLy3VUo">Clike here to watch the tutorial video that was used to create this web component</a></div>
             </custom-web-component>
 
           </ul>
@@ -86,10 +88,10 @@
         <br>
 
 
-        <!-- this is a web component -->
-        <custom-web-component name="This is the Nav-Bar (Header) Web Component" avatar="./favicon.ico">
-          <div slot="email">info@email.com: my background is blue but when you hover over me i should turn red</div>
-          <div slot="phone">123-456-7890: this color changing is controlled in the './public/ourWebComponent.js' file</div>
+        <!-- this is a web component  -->
+        <custom-web-component name="This is a Web Component, it requires less back-end code than Express.js layouts & partials, but it must be types out each time it occurs in the .html & .egs files" avatar="./images/web-components.svg">
+          <div class="text-gray-900" slot="homepage"><a href="https://www.webcomponents.org/">Clike here to learn all about web components and why they are useful</a></div>
+          <div class="text-gray-900" slot="resources"><a href="https://youtu.be/PCWaFLy3VUo">Clike here to watch the tutorial video that was used to create this web component</a></div>
         </custom-web-component>
 
         <script src="./web-components/ourWebComponent.js"></script>

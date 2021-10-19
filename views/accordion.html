@@ -28,7 +28,8 @@
 
   </head>
   <body>
-    <p><h3>This H3 text should be orange and styled by the styles.css file in the '/public' directory</h3></p>
+    <h1 class="text-center text-2xl">accordion.html</h1>
+    <p><h3>This H3 text should be orange and styled by css file in located here: <strong class="text-yellow-800 font-mono">./public/custom-styles/mystyles.css</strong></h3></p>
 
     <!-- reading the scripts.js (JavaScript) file using Alpine.js component -->
     <div x-data="{ myString }">
@@ -37,16 +38,18 @@
 
     <!-- accordion from here: https://www.w3schools.com/howto/howto_js_accordion.asp -->
     <!-- NOTE: this is raw HTML, CSS, and JavaScript; there is no Alpine.js being used here -->
-    <button class="accordion">Click on this accordion button and it should slowly descend</button>
+    <button class="accordion">Click on this accordion button and it should slowly descend; this accordion uses raw JavaScript located here: <strong class="text-yellow-800 font-mono">./public/scripts/scripts.js</strong> to make sure that JavaScript is working properly</button>
     <div class="panel">
       <p>Lorem ipsum...</p>
     </div>
-
-    <!-- this is a web component that will eventually become a footer displayed on all pages -->
-    <custom-web-component name="This is the Footer Web Component" avatar="./favicon.ico">
-      <div slot="email">some-other-info@email.com</div>
-      <div slot="phone">867-5309</div>
-    </custom-web-component>
+    <br><br><br><br><br>
+    <!-- this is a web component  -->
+    <div class="bg-green-200">
+      <custom-web-component name="This is a Web Component, it requires less back-end code than Express.js layouts & partials, but it must be types out each time it occurs in the .html & .egs files" avatar="./images/web-components.svg">
+        <div class="text-gray-900" slot="homepage"><a href="https://www.webcomponents.org/">Clike here to learn all about web components and why they are useful</a></div>
+        <div class="text-gray-900" slot="resources"><a href="https://youtu.be/PCWaFLy3VUo">Clike here to watch the tutorial video that was used to create this web component</a></div>
+      </custom-web-component>
+    </div>
 
     <!-- NOTE: this script is used for web component header (nav bar) and footer -->
     <!--  It must be displayed in the </body> and it must be placed below all of the web components -->
