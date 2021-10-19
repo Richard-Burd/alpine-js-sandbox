@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- this is what prevents the hamburger icon from getting pushed off the viewport when text in the './views/layoutandpartials.ejs' is made bigger -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
     <title><%- title %></title>
     <link rel="stylesheet">
   </head>
@@ -16,7 +19,7 @@
         <main><%- body %></main>
         <side>Sidebar</side>
       </div>
-      
+
       <%- include('../partials/header.ejs') %>
 
     </div>
