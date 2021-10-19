@@ -27,7 +27,7 @@ app.get('/my-custom-download', (req, res) => {
 app.listen(PORT);
 
 // this gives the .html files access to the .jpg, .svg, .js & .css files in the public folder
-app.use(express.static(__dirname + '/public'));
+app.use(express.static("public"));
 
 // Set the templating engine
 // https://youtu.be/lYVKbAn5Od0?t=248
@@ -38,9 +38,10 @@ app.set('layout', './layouts/full-width')
 
 app.set('view engine', 'ejs')
 
-app.get('/layout-n-partials', (req, res) => {
-  res.render('layout-n-partials.ejs')
-})
+// NOTE: We want to get rid of this and get the .ejs files to render statically like the .html files already do
+app.get('/layoutandpartials', (req, res) => {
+  res.render('layoutandpartials.ejs')
+});
 
 // https://stackoverflow.com/questions/16534545/how-to-get-rid-of-html-extension-when-serving-webpages-with-node-js
 // https://youtu.be/SccSCuHhOw0?t=1735
@@ -50,7 +51,7 @@ app.use(express.static("views", {
 
 // https://www.codegrepper.com/code-examples/javascript/how+to+make+a+404+page+nodejs
 // This is what happens when the user tries to go to a page that does not exist
-app.use(function(req, res, next){
+app.use(function(req, res){
   res.status(404);
   res.sendFile('./views/404.html', { root: __dirname});
   // option to just have text display instead of an HTML page

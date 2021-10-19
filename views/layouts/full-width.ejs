@@ -8,26 +8,25 @@
     <title>The Layout</title>
   </head>
   <style>
-    .custom-styles {
-      background-color: white;
-      padding: 20px;
-      margin: 20px
-    };
-
-    .custom-styles {
-      font-weight: bold;
-      color: rgb(55, 87, 70);
-    }
     .custom-styles:hover {
-      color: red;
-      transition: 2s;
+      background-color: rgb(209, 154, 136);
+      color: rgb(87, 50, 37);
+      transition: 1s;
     }
+    .custom-styles {
+      background-color: rgb(222, 250, 212);
+      padding: 20px;
+      margin: 20px;
+      font-weight: bold;
+      color: rgb(109, 117, 89);
+      text-align: center
+    };
   </style>
   <body>
-    <p class="custom-styles">This is the full-width.ejs file in the '/views/layouts' directory</p>
-      <%- include('../partials/header.ejs') %>
+    <p class="custom-styles uppercase">This is the full-width.ejs file in the '/views/layouts' directory w/non-tailwind styling the hovering effects + tailwind uppercase</p>
+      <%- include('../partials/navbar.ejs') %>
       <main><%- body %></main>
-    <p>This is the full-width.ejs file in the '/views/layouts' directory</p>
+    <p class="custom-styles uppercase">This is the full-width.ejs file in the '/views/layouts' directory w/non-tailwind styling the hovering effects + tailwind uppercase</p>
     <%- include('../partials/footer.ejs') %>
   </body>
 </html>
