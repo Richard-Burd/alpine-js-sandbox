@@ -10,20 +10,22 @@
     <script src="scripts/scripts.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css">
-    <title>layout-n-partials</title>
+
+    <link href="http://fonts.cdnfonts.com/css/arial-rounded-mt-bold" rel="stylesheet">
     <style>
+      /* NOTE: this link works locally, but not on Heroku, so I'm trying the link above */
       /* https://www.cdnfonts.com/arial-rounded-mt-bold.font */
       @import url('http://fonts.cdnfonts.com/css/arial-rounded-mt-bold');
       .UCS-fav-font {
         font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
       }
     </style>
+    <title>layout-n-partials</title>
   </head>
   <body>
     <div class="bg-gray-200 m-5 p-4">
       <h4 class="UCS-fav-font transition duration-500 ease-in-out hover:text-red-900 hover:bg-red-400 bg-gray-400 p-2">This text should be Arial Rounded MT Bold, which is the favorite font for titles found inside the UCS website; it should change to red when you hover on it if tailwind is working properly</h4>
-      <h3 class="text-xl">This is the <strong class="font-mono">layoutsandpartials.ejs</strong> file wrapped in the <strong class="font-mono">./layouts/full-width.ejs</strong> layout</h3>
-      <h3>it behaves much like an HTML file, but uses Express.js</h3>
+      <h3 class="text-xl">This is the very start (top) of the <strong class="font-mono">'./views/layoutsandpartials.ejs'</strong> file wrapped in the <strong class="font-mono">./layouts/full-width.ejs</strong> layout; it behaves much like an HTML file, but uses Express.js</h3>
       <div class="m-4 p-4 text-justify">
         <p>
           <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -113,7 +115,7 @@
         <%- include('./partials/pureaccordion.ejs') %>
 
       </div>
-      <h3 class="text-xl">This is the very bottom of the <strong>layoutsandpartials.ejs</strong> file wrapped in the <strong>./layouts/full-width.ejs</strong> layout</h3>
+      <h3 class="text-xl">This is the very end (bottom) of the <strong class="font-mono">'./views/layoutsandpartials.ejs'</strong> file wrapped in the <strong class="font-mono">./layouts/full-width.ejs</strong> layout; it behaves much like an HTML file, but uses Express.js</h3>
     </div>
   </body>
 </html>
