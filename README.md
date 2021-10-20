@@ -79,7 +79,7 @@ alpine-js-sandbox
 │   │   └── styles.css (this file is in the gitignore and does not get pushed to the production build)
 │   ├── web-components
 │   │   └── ourWebComponent.js
-│   ├── favicon.ico
+│   └── favicon.ico
 ├── src
 │   └── styles.css (devs edit this file then run "$npm run build-css" to run Tailwind-CSS)
 ├── test-servers (depricated earlier versions of the server [now called: "app.js"])
