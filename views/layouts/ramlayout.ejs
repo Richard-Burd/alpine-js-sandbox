@@ -1,0 +1,28 @@
+<!DOCTYPE html> <!-- https://youtu.be/lYVKbAn5Od0?t=1269 -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- this is what prevents the text & images from shrinking in the mobile versions -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- NOTE: this full-width.ejs element wrapps another element inside of it -->
+    <!-- ...so if you link to Alpine.js as shown below, Alpine.js will actually fire twice -->
+    <!-- ...this would cause problems; the myArray inside ./scripts/scripts.js for example,  -->
+    <!-- ...would get iterated on twice, in layoutsandpartials.ejs and you would 6 pets instead of 3 -->
+    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
+
+    <!-- NOTE: the layout must have this link in order for tailwind to work on the partials, but the layout cannot be styled with tailwind -->
+    <link rel="stylesheet" type="text/css" href="..public/tailwind-css/styles.css">
+
+    <title>The RAM Layout</title>
+  </head>
+
+  <body>
+    <div class="py-14">
+      <%- include('../partials/ramnavbar.ejs') %>
+        <main><%- body %></main>
+      <%- include('../partials/footer.ejs') %>
+    </div>
+  </body>
+</html>
