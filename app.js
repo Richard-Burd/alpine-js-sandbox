@@ -47,6 +47,7 @@ app.get('/myfolder/nested', (req, res) => {
   res.render('myfolder/nested.ejs')
 });
 
+// NOTE: this one specifies a non-default layout whereas the two above use the default layout at: './layouts/full-width'
 app.get('/ramhome', (req, res) => {
     res.render('ramhome.ejs', {layout: './layouts/ramlayout'});
 });
