@@ -11,6 +11,10 @@ template.innerHTML = `
   <!-- ...therefore web components are slow; they are inefficient because they don't "pull-in" outside resources well -->
   <!-- ...this is why it is better to use express.js partialsor an express template language of some other sort -->
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- this is what prevents the text & images from shrinking in the mobile versions -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  
   <style>
     /* this styling will not effect elements on the DOM outside of this component */
     .custom-web-component {
