@@ -58,31 +58,64 @@ alpine-js-sandbox
 │   ├── endeavors.json
 │   └── test.json
 ├── public
+│   ├── custom-styles
+│   ├── documents
 │   ├── images
+│   │   ├── ramlogo
+│   │   │   ├── 0.jpg
+│   │   │   ├── 1.jpg
+│   │   │   ├── 2.jpg
+│   │   │   ├── 3.jpg
+│   │   │   ├── 4.jpg
+│   │   │   └── 5.jpg
 │   │   ├── alpinejs.jpg
-│   │   └── alpinejs.svg
+│   │   ├── alpinejs.svg
+│   │   ├── kardeshev.jpg
+│   │   └── web-components.svg
+│   ├── scripts
+│   │   └── scripts.js
+│   ├── tailwind-css
+│   │   ├── readme.md
+│   │   └── styles.css (this file is in the gitignore and does not get pushed to the production build)
+│   ├── web-components
+│   │   └── ourWebComponent.js
 │   ├── favicon.ico
-│   ├── ourWebComponent.js (this is the Web Component)
-│   ├── scripts.js
-│   └── styles.css (devs don't edit this, it is created by Tailwind.CSS)
-├── resources (this is depricated and scheduled to be deleted)
 ├── src
 │   └── styles.css (devs edit this file then run "$npm run build-css" to run Tailwind-CSS)
 ├── test-servers (depricated earlier versions of the server [now called: "app.js"])
 ├── tutorials (these have nothing to do with the project, they are Alpine.js YouTube tutorials)
 ├── views (the app.js server goes into this folder and serves up everything in here)
-│   ├── myfolder
-│   │   └── myview.html (this is to ensure nested .html files will be read by the server)
+│   ├── layouts
+│   │   ├── full-width.ejs
+│   │   ├── ramlayout.ejs
+│   │   └── sidebar.ejs (currently unused, but will be built out if we want a sidebar later)
+│   ├── myfolder (used to test subdirectories, e.g.: www.awebsite.com/section/subsection/final-resource)
+│   │   ├── myview.html
+│   │   └── nested.ejs
+│   ├── partials
+│   │   ├── footer.ejs
+│   │   ├── header.ejs (this is currently unused since we use the navbars)
+│   │   ├── navbar.ejs
+│   │   ├── pureaccordion.ejs
+│   │   └── ramnavbar.ejs
 │   ├── 404.html (user shoud be served this if they go to a URI that does not exist)
 │   ├── about.html
 │   ├── accordion.html
 │   ├── illustrations.html
-│   └── index.html
+│   ├── index.html
+│   ├── layoutandpartials.ejs
+│   ├── ram.html
+│   ├── ramhome.ejs
+│   └── scratch.ejs (currently unused, slated for deletion)
+├── .gitignore
+│   ├── node_modules
+│   ├── notes-to-self.txt
+│   └── public/tailwind-css/styles.css
 ├── app.js (this is the all-important server using Express.js for routing)
 ├── LICENSE
 ├── package-lock.json
 ├── package.json
 ├── Procfile
-├── tailwind.config.js
-└── README.md
+├── README.md
+└── tailwind.config.js
 ```
