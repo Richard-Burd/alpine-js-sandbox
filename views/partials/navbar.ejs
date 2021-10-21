@@ -1,78 +1,105 @@
 <!DOCTYPE html>
 <html>
-<!-- https://www.youtube.com/watch?v=puaX_nhTMRU https://codepen.io/chris__sev/pen/QWGjQKe -->
-<!-- https://www.youtube.com/watch?v=1hoSQhtd0IQ -->
+  <!-- https://www.youtube.com/watch?v=puaX_nhTMRU https://codepen.io/chris__sev/pen/QWGjQKe -->
+  <!-- https://www.youtube.com/watch?v=1hoSQhtd0IQ -->
 
-<!-- all this JavaScript does is control the mobile-view  hamburger button -->
-<!-- since it is unique to the navbar, it is included in this .ejs file instead of being imported -->
-<!-- NOTE: Alpine.js should be used to rebuild this in the future -->
-<head>
-  <!-- this is what prevents the hamburger icon from getting pushed off the viewport when text in the './views/layoutandpartials.ejs' is made bigger -->
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<head>
+  <!-- all this JavaScript does is control the mobile-view  hamburger button -->
+  <!-- since it is unique to the navbar, it is included in this .ejs file instead of being imported -->
+  <!-- NOTE: Alpine.js should be used to rebuild this in the future -->
+  <head>
+    <!-- this is what prevents the hamburger icon from getting pushed off the viewport when text in the './views/layoutandpartials.ejs' is made bigger -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-<body>
-  <!-- navbar goes here -->
-  <div class="h-10 fixed top-0 inset-x-0 z-10">
-    <nav class="bg-blue-300">
-      <div class="max-w-5xl mx-auto bg-blue-400 pr-2">
-        <div class="flex justify-between">
-          <div class="flex space-x-4">
-            <!-- logo -->
-            <div>
-              <a href="/" class="flex items-center py-4 px-4 text-gray-700 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100">
-                <svg class="h-6 w-6 mr-2 text-blue-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-                <span class="font-bold">Home</span>
-              </a>
+  <head>
+
+  <body>
+    <!-- navbar goes here -->
+    <div class="h-10 fixed top-0 inset-x-0 z-10" id="navbar">
+      <nav class="bg-blue-300">
+        <div class="max-w-5xl mx-auto bg-blue-400 pr-2">
+          <div class="flex justify-between">
+            <div class="flex space-x-4">
+              <!-- logo -->
+              <div>
+                <a href="/" class="flex items-center py-4 px-4 text-gray-700 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100">
+                  <svg class="h-6 w-6 mr-2 text-blue-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  </svg>
+                  <span class="font-bold">Home</span>
+                </a>
+              </div>
+              <!-- primary nav -->
+              <div class="hidden md:flex flex items-center space-x-1">
+                <a href="/about" class="py-4 px-3 text-gray-700 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">About</a>
+                <a href="https://github.com/Richard-Burd/alpine-js-sandbox" class="py-4 px-3 text-gray-700 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Git Repo</a>
+                <a href="/ramhome" class="py-4 px-3 text-gray-700 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">RAM Homepage</a>
+              </div>
             </div>
-            <!-- primary nav -->
+            <!-- secondary nav -->
             <div class="hidden md:flex flex items-center space-x-1">
-              <a href="/about" class="py-4 px-3 text-gray-700 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">About</a>
-              <a href="https://github.com/Richard-Burd/alpine-js-sandbox" class="py-4 px-3 text-gray-700 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Git Repo</a>
-              <a href="/ramhome" class="py-4 px-3 text-gray-700 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">RAM Homepage</a>
+              <a href="http://urbancruiseship.org/" class="py-4 px-3 text-gray-700 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-300">UCS Homepage</a>
+              <a href="/partials/navbar" class="py-2 px-3 text-gray-700 hover:bg-yellow-900 hover:text-gray-100 focus:bg-yellow-900 focus:text-gray-100 bg-yellow-400 text-yellow-900 rounded transition duration-300">Get Navbar</a>
             </div>
-          </div>
-          <!-- secondary nav -->
-          <div class="hidden md:flex flex items-center space-x-1">
-            <a href="http://urbancruiseship.org/" class="py-4 px-3 text-gray-700 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-300">UCS Homepage</a>
-            <a href="/partials/navbar" class="py-2 px-3 text-gray-700 hover:bg-yellow-900 hover:text-gray-100 focus:bg-yellow-900 focus:text-gray-100 bg-yellow-400 text-yellow-900 rounded transition duration-300">Get Navbar</a>
-          </div>
 
 
-          <!-- mobile button goes here -->
-          <div class="md:hidden flex items-center">
-            <button class="mobile-menu-button">
-              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+            <!-- mobile button goes here -->
+            <div class="md:hidden flex items-center">
+              <button class="mobile-menu-button">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
 
+          </div>
         </div>
+      </nav>
+
+
+      <!-- mobile menu-->
+      <div class="mobile-menu hidden md:hidden divide-y divide-light-blue-400 border-b-2 border-blue-300">
+        <a href="/about" class="bg-blue-200 block py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">About</a>
+        <a href="https://github.com/Richard-Burd/alpine-js-sandbox" class="bg-blue-200 block py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Git Repo</a>
+        <a href="/ramhome" class="bg-blue-200 block py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Ram Animation Logo</a>
       </div>
-    </nav>
-
-
-    <!-- mobile menu-->
-    <div class="mobile-menu hidden md:hidden divide-y divide-light-blue-400 border-b-2 border-blue-300">
-      <a href="/about" class="bg-blue-200 block py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">About</a>
-      <a href="https://github.com/Richard-Burd/alpine-js-sandbox" class="bg-blue-200 block py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Git Repo</a>
-      <a href="/ramhome" class="bg-blue-200 block py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Ram Animation Logo</a>
     </div>
-  </div>
-</body>
+  </body>
 
-<script type="text/javascript">
-  console.log("This is the JavaScript inside the <script> tag inside the './partials/navbar.ejs file'")
-  // grab everything we need
-  const btn = document.querySelector(".mobile-menu-button");
-  const menu = document.querySelector(".mobile-menu");
+  <!-- controlls the mobile dropdown menu-->
+  <script type="text/javascript">
+    console.log("This is the JavaScript inside the <script> tag inside the './partials/navbar.ejs file'")
+    // grab everything we need
+    const btn = document.querySelector(".mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
 
-  // add event listeners
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-</script>
+    // add event listeners
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- causes the navbar to dissapear when user scrolls down...and reappear when user scrolls up -->
+  <script type="text/javascript">
+    // https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+    // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-60px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
+
+  <!-- How TO - Hide Menu on Scroll -->
+  <!-- https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp -->
+  <style media="screen">
+    #navbar {
+      transition: top 0.5s; /* Transition effect when sliding down (and up) */
+    }
+  </style>
+
 </html>
