@@ -57,7 +57,7 @@
 
 
       <!-- mobile menu-->
-      <div class="mobile-menu hidden md:hidden divide-y divide-light-blue-400 border-b-2 border-blue-300">
+      <div class="mobile-menu hidden md:hidden divide-y divide-light-blue-400 border-b-2 border-blue-300" id="mobile-dropdown">
         <a href="/about" class="bg-blue-200 block py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">About</a>
         <a href="https://github.com/Richard-Burd/alpine-js-sandbox" class="bg-blue-200 block py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Git Repo</a>
         <a href="/ramhome" class="bg-blue-200 block py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Ram Animation Logo</a>
@@ -67,6 +67,10 @@
 
   <!-- controlls the mobile dropdown menu-->
   <script type="text/javascript">
+    // this section toggles the mobile menu to appear and dissapear when the user pushes the hamburger button
+    // sources:
+    //   a.) https://www.youtube.com/watch?v=puaX_nhTMRU
+    //   b.) https://codepen.io/chris__sev/pen/QWGjQKe
     console.log("This is the JavaScript inside the <script> tag inside the './partials/navbar.ejs file'")
     // grab everything we need
     const btn = document.querySelector(".mobile-menu-button");
@@ -76,21 +80,32 @@
     btn.addEventListener("click", () => {
       menu.classList.toggle("hidden");
     });
-  </script>
 
-  <!-- causes the navbar to dissapear when user scrolls down...and reappear when user scrolls up -->
-  <script type="text/javascript">
-    // https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+
     // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
+    // sources:
+    //    a.) Simpler implementation of the code: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+    //    b.) More complex version: https://stackoverflow.com/questions/56071897/hide-when-scroll-down-appears-when-scroll-up
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
       let currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
-      } else {
-        document.getElementById("navbar").style.top = "-60px";
+        prevScrollpos = currentScrollPos;
+
+      // if you set this "200" value to 0, you loose the delay effect
+      } else if (currentScrollPos > prevScrollpos + 200){
+        document.getElementById("navbar").style.top = "-55px";
+
+        // this section hides the mobile dropdown menu when the user scrolls down
+        let mobileDropdown = document.getElementById("mobile-dropdown")
+        if (!(mobileDropdown.classList.contains('hidden'))) {
+
+          // if you set this "-166" value to 0, you loose the delay effect
+          document.getElementById("navbar").style.top = "-166px";
+        }
+        prevScrollpos = currentScrollPos;
       }
-      prevScrollpos = currentScrollPos;
     }
   </script>
 
