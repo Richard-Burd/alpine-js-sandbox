@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Script you need to read alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <!-- NOTE: the layout must have this link in order for tailwind to work on the partials, but the layout cannot be styled with tailwind -->
+    <link rel="stylesheet" type="text/css" href="..public/tailwind-css/styles.css">
+
+    <title>UCS Layout</title>
+  </head>
+  <body>
+    <div class="py-14">
+      <%- include('../partials/navbar.ejs') %>
+        <main><%- body %></main>
+      <%- include('../partials/footer.ejs') %>
+    </div>
+  </body>
+</html>
