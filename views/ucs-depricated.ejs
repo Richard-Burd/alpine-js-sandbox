@@ -1,0 +1,75 @@
+<!-- https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ -->
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Script you need to read alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <!-- internal css file -->
+    <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+
+    <title>UCS Homepage</title>
+  </head>
+  <body>
+    <br><br>
+    <div class="gap-8 grid lg:grid-cols-3 md:grid-cols-2 p-4 bg-gray-100">
+      <%- include("./partials/ucs-button.ejs", {title:"ENERGY", description: "Production, distribution, and consumption", color:"#f7d49bff", link:"http://urbancruiseship.org/site/energy"}) %>
+      <%- include("./partials/ucs-button.ejs", {title:"MATTER", description: "Food, water, and other consumables", color:"#baff73ff", link:"http://urbancruiseship.org/site/foodwater"}) %>
+      <%- include("./partials/ucs-button.ejs", {title:"HABITAT", description: "Perspective and Perception", color:"#8ee8ceff", link:"http://urbancruiseship.org/site/habitat"}) %>
+      <%- include("./partials/ucs-button.ejs", {title:"CITIES", description: "Perspective and Perception", color:"#ffb4b4ff", link:"http://urbancruiseship.org/site/cities"}) %>
+      <%- include("./partials/ucs-button.ejs", {title:"WASTE", description: "Zero waste methodology vs. scams", color:"#c1b698ff", link:"http://urbancruiseship.org/site/waste"}) %>
+      <%- include("./partials/ucs-button.ejs", {title:"OCEANS", description: "Health, resources, and energy", color:"#69d7ffff", link:"http://urbancruiseship.org/site/oceans"}) %>
+    </div>
+    <!--
+    <br><br>
+    <div class="flex flex-row">
+      <div class="p-2 bg-yellow-200">Block-1 This has some text</div>
+      <div class="p-2 bg-blue-200">Block-2 This has some more text, quite a bit really</div>
+      <div class="p-2 bg-green-200">Block-3 Not much text than what is above</div>
+      <div class="p-2 bg-purple-200">Block-4 no more text </div>
+    </div>
+    <br><br>
+    <div class="flex flex-wrap">
+      <div class="p-2 bg-yellow-200">Block-1 This has some text</div>
+      <div class="p-2 bg-blue-200">Block-2 This has some more text, quite a bit really</div>
+      <div class="p-2 bg-green-200">Block-3 Not much text than what is above</div>
+      <div class="p-2 bg-purple-200">Block-4 no more text </div>
+    </div>
+    <br><br>
+    <div class="flex justify-center items-center">
+      <div class="p-2 bg-yellow-200">Block-1</div>
+      <div class="p-2 bg-blue-200 text-5xl">Block-2</div>
+      <div class="p-2 bg-green-200">Block-3</div>
+      <div class="p-2 bg-purple-200">Block-4</div>
+    </div>
+    <br><br>
+    <br>
+    <div class="arial-rounded-mt-bold">
+      <img src="/images/ucs-homepage-icons/text-plain.svg" alt="an icon for the energy section">
+    </div>
+    <br><br>
+    -->
+    <p>
+      <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+    <br>
+    <p>
+      <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+    <br>
+    <p>
+      <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+  </body>
+</html>
