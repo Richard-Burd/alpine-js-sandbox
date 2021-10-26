@@ -9,12 +9,23 @@
     <!-- NOTE: the layout must have this link in order for tailwind to work on the partials, but the layout cannot be styled with tailwind -->
     <link rel="stylesheet" type="text/css" href="..public/tailwind-css/styles.css">
 
+    <style>
+      /* NOTE: this link works locally, but not on Heroku, so I'm trying the link above */
+      /* https://www.cdnfonts.com/arial-rounded-mt-bold.font */
+      @import url('https://fonts.cdnfonts.com/css/arial-rounded-mt-bold');
+      .arial-rounded-mt-bold {
+        font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
+      }
+    </style>
+
     <title>UCS Layout</title>
   </head>
   <body>
     <div class="py-14">
       <%- include('../partials/navbar.ejs') %>
-        <main><%- body %></main>
+        <!-- "max-w-screen-lg" limits the overall width of the website -->
+        <!-- "mx-auto" center-justifies the (e.g. ucs.ejs) content in this layout -->
+        <main class="sm:max-w-screen-md lg:max-w-screen-lg mx-auto"><%- body %></main>
       <%- include('../partials/footer.ejs') %>
     </div>
   </body>

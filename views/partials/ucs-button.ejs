@@ -1,0 +1,23 @@
+<!-- https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ -->
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Script you need to read alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <!-- internal css file -->
+    <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+
+    <title>UCS Homepage Specialized-Site Link</title>
+  </head>
+  <body>
+      <button onclick="window.location.href='<%= link %>'" class="rounded-2xl shadow-lg transform hover:scale-110 transition duration-300 h-30" style="background-color:<%= color %>;">
+        <div class="m-4">
+          <div class="arial-rounded-mt-bold text-6xl text-center"><%= title %></div>
+          <div class="text-left"><%= description %></div>
+        </div>
+      </button>
+  </body>
+</html>
