@@ -621,7 +621,8 @@
          d="m 222.43792,51.62178 h 54.09763 c 8.15251,0 14.71572,1.943588 14.71572,4.35782 v 32.72653 c 0,2.414232 -6.56321,4.35782 -14.71572,4.35782 h -54.09763 c -8.15251,0 -14.71572,-1.943588 -14.71572,-4.35782 V 55.9796 c 0,-2.414232 6.56321,-4.35782 14.71572,-4.35782 z" />
       <g
          id="g59817-5-7-8"
-         transform="matrix(1.3114215,0,0,1.3114215,199.84245,-265.92324)">
+         transform="matrix(1.3114215,0,0,1.3114215,199.84245,-265.92324)"
+         style="opacity:0.85">
         <g
            aria-label="WASTE"
            transform="scale(0.91634797,1.0912885)"
@@ -649,8 +650,7 @@
              id="path20521" />
         </g>
         <g
-           aria-label="Zero waste methodology vs. 
-scams"
+           aria-label="Zero waste methodology vs.  scams"
            id="text39694-7-0-3-6-0"
            style="font-style:italic;font-size:4.23061px;line-height:1.45;font-family:Calibri;-inkscape-font-specification:'Calibri, Italic';font-variant-ligatures:none;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583">
           <path
