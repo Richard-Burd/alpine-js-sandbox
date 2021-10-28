@@ -7,7 +7,8 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 
     <!-- NOTE: the layout must have this link in order for tailwind to work on the partials, but the layout cannot be styled with tailwind -->
-    <link rel="stylesheet" type="text/css" href="..public/tailwind-css/styles.css">
+    <!-- NOTE: the link must be from the './public' directory of the application as specified in 'package.json' here: "build-css:dev": "tailwindcss -i src/styles.css -o public/tailwind-css/styles.css" -->
+    <link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css">
 
     <!-- NOTE: this is a tempoary link in case we want to copy & paste the current UCS Homepage via. "View page source" -->
     <!-- When the new UCS web page is rebuilt, this should be removed so we have faster loading times -->
