@@ -1,127 +1,113 @@
-<!DOCTYPE html>
-<html>
-  <!-- https://www.youtube.com/watch?v=puaX_nhTMRU https://codepen.io/chris__sev/pen/QWGjQKe -->
-  <!-- https://www.youtube.com/watch?v=1hoSQhtd0IQ -->
 
-  <!-- all this JavaScript does is control the mobile-view  hamburger button -->
-  <!-- since it is unique to the navbar, it is included in this .ejs file instead of being imported -->
-  <!-- NOTE: Alpine.js should be used to rebuild this in the future -->
-  <head>
-    <!-- this is what prevents the hamburger icon from getting pushed off the viewport when text in the './views/layoutandpartials.ejs' is made bigger -->
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.8, minimum-scale=1.0">
+<!-- https://www.youtube.com/watch?v=puaX_nhTMRU https://codepen.io/chris__sev/pen/QWGjQKe -->
+<!-- https://www.youtube.com/watch?v=1hoSQhtd0IQ -->
 
-    <style media="screen">
-      @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-      #navbar {
-        font-family: 'Varela Round', sans-serif;
-      }
-    </style>
+<style media="screen">
+  @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+  #navbar {
+    font-family: 'Varela Round', sans-serif;
+  }
+</style>
 
-  <head>
-
-  <body>
-    <!-- navbar goes here -->
-    <div class="h-10 fixed top-0 inset-x-0 z-10" id="navbar">
-      <nav class="bg-gray-300">
-        <div class="max-w-5xl mx-auto bg-gray-400 pr-2">
-          <div class="flex justify-between text-lg">
-            <div class="flex space-x-4">
-              <!-- logo -->
-              <div>
-                <a href="http://urbancruiseship.org/" class="flex items-center py-4 px-4 text-gray-900 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100">
-                  <span class="font-bold">Home</span>
-                </a>
-              </div>
-              <!-- primary nav -->
-              <div class="flex hidden md:flex items-center space-x-1 text-gray-900">
-                <a href="http://urbancruiseship.org/about" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">About</a>
-                <a href="http://urbancruiseship.org/standards" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Standards</a>
-                <a href="http://urbancruiseship.org/team" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Crew</a>
-                <a href="http://urbancruiseship.org/activities" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Activities</a>
-              </div>
-            </div>
-            <!-- secondary nav -->
-            <div class="hidden md:flex items-center space-x-1">
-              <a href="mailto: info@urbancruiseship.org" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-300">Contact</a>
-            </div>
-
-
-            <!-- mobile button goes here -->
-            <div class="md:hidden flex items-center">
-              <button class="mobile-menu-button">
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
-
+<!-- navbar goes here -->
+<div class="h-10 fixed top-0 inset-x-0 z-10" id="navbar">
+  <nav class="bg-gray-300">
+    <div class="max-w-5xl mx-auto bg-gray-400 pr-2">
+      <div class="flex justify-between text-lg">
+        <div class="flex space-x-4">
+          <!-- logo -->
+          <div>
+            <a href="http://urbancruiseship.org/" class="flex items-center py-4 px-4 text-gray-900 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100">
+              <span class="font-bold">Home</span>
+            </a>
+          </div>
+          <!-- primary nav -->
+          <div class="flex hidden md:flex items-center space-x-1 text-gray-900">
+            <a href="http://urbancruiseship.org/about" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">About</a>
+            <a href="http://urbancruiseship.org/standards" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Standards</a>
+            <a href="http://urbancruiseship.org/team" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Crew</a>
+            <a href="http://urbancruiseship.org/activities" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Activities</a>
           </div>
         </div>
-      </nav>
+        <!-- secondary nav -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="mailto: michael@urbancruiseship.org" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-300">Contact</a>
+        </div>
 
 
-      <!-- mobile menu-->
-      <div class="mobile-menu hidden md:hidden divide-y divide-gray-300 border-b-2 border-gray-300" id="mobile-dropdown">
-        <a href="http://urbancruiseship.org/about" class="bg-gray-200 block  focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">About</a>
-        <a href="http://urbancruiseship.org/standards" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100  py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Standards</a>
-        <a href="http://urbancruiseship.org/team" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Crew</a>
-        <a href="http://urbancruiseship.org/activities" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Activities</a>
-        <a href="mailto: info@urbancruiseship.org" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Contact</a>
+        <!-- mobile button goes here -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
       </div>
     </div>
-  </body>
-
-  <!-- controlls the mobile dropdown menu-->
-  <script type="text/javascript">
-    // this section toggles the mobile menu to appear and dissapear when the user pushes the hamburger button
-    // sources:
-    //   a.) https://www.youtube.com/watch?v=puaX_nhTMRU
-    //   b.) https://codepen.io/chris__sev/pen/QWGjQKe
-    console.log("This is the JavaScript inside the <script> tag inside the './partials/ucs-navbar.ejs file'")
-    // grab everything we need
-    const btn = document.querySelector(".mobile-menu-button");
-    const menu = document.querySelector(".mobile-menu");
-
-    // add event listeners
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
+  </nav>
 
 
-    // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
-    // sources:
-    //    a.) Simpler implementation of the code: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
-    //    b.) More complex version: https://stackoverflow.com/questions/56071897/hide-when-scroll-down-appears-when-scroll-up
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      let currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-        prevScrollpos = currentScrollPos;
+  <!-- mobile menu-->
+  <div class="mobile-menu hidden md:hidden divide-y divide-gray-300 border-b-2 border-gray-300" id="mobile-dropdown">
+    <a href="http://urbancruiseship.org/about" class="bg-gray-200 block  focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">About</a>
+    <a href="http://urbancruiseship.org/standards" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100  py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Standards</a>
+    <a href="http://urbancruiseship.org/team" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Crew</a>
+    <a href="http://urbancruiseship.org/activities" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Activities</a>
+    <a href="mailto: michael@urbancruiseship.org" class="bg-gray-200 block focus:bg-gray-900 focus:text-gray-100 py-2 px-4 text-sm hover:bg-gray-900 hover:text-gray-100">Contact</a>
+  </div>
+</div>
 
-      // if you set this "200" value to 0, you loose the delay effect
-      } else if (currentScrollPos > prevScrollpos + 200){
-        // the "-59px" below controlls how far up the navbar moves off the viewport when the user scrolls up
-        document.getElementById("navbar").style.top = "-59px";
+<!-- controlls the mobile dropdown menu-->
+<script type="text/javascript">
+  // this section toggles the mobile menu to appear and dissapear when the user pushes the hamburger button
+  // sources:
+  //   a.) https://www.youtube.com/watch?v=puaX_nhTMRU
+  //   b.) https://codepen.io/chris__sev/pen/QWGjQKe
 
-        // this section hides the mobile dropdown menu when the user scrolls down
-        let mobileDropdown = document.getElementById("mobile-dropdown")
-        if (!(mobileDropdown.classList.contains('hidden'))) {
+  // grab everything we need
+  const btn = document.querySelector(".mobile-menu-button");
+  const menu = document.querySelector(".mobile-menu");
 
-          // the "-244px" below controlls how far up the navbar moves off the viewport when the user scrolls up...when the mobile dropdown menu is deployed
-          document.getElementById("navbar").style.top = "-244px";
-        }
-        prevScrollpos = currentScrollPos;
+  // add event listeners
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+
+  // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
+  // sources:
+  //    a.) Simpler implementation of the code: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+  //    b.) More complex version: https://stackoverflow.com/questions/56071897/hide-when-scroll-down-appears-when-scroll-up
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+      prevScrollpos = currentScrollPos;
+
+    // if you set this "200" value to 0, you loose the delay effect
+    } else if (currentScrollPos > prevScrollpos + 200){
+      // the "-59px" below controlls how far up the navbar moves off the viewport when the user scrolls up
+      document.getElementById("navbar").style.top = "-59px";
+
+      // this section hides the mobile dropdown menu when the user scrolls down
+      let mobileDropdown = document.getElementById("mobile-dropdown")
+      if (!(mobileDropdown.classList.contains('hidden'))) {
+
+        // the "-244px" below controlls how far up the navbar moves off the viewport when the user scrolls up...when the mobile dropdown menu is deployed
+        document.getElementById("navbar").style.top = "-244px";
       }
+      prevScrollpos = currentScrollPos;
     }
-  </script>
+  }
+</script>
 
-  <!-- How TO - Hide Menu on Scroll -->
-  <!-- https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp -->
-  <style media="screen">
-    #navbar {
-      transition: top 0.5s; /* Transition effect when sliding down (and up) */
-    }
-  </style>
-
-</html>
+<!-- How TO - Hide Menu on Scroll -->
+<!-- https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp -->
+<style media="screen">
+  #navbar {
+    transition: top 0.5s; /* Transition effect when sliding down (and up) */
+  }
+</style>

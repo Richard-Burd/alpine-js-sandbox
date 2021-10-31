@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.8, minimum-scale=1.0">
     <meta charset="utf-8">
 
     <!-- Script you need to read alpine.js -->
@@ -21,9 +22,6 @@
       .arial-rounded-mt-bold {
         font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
       }
-    </style>
-
-    <style media="screen">
       /* This layout file forms the backbone of the UCS website and holds all of the font links */
       @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
       .varela-round-font {
@@ -45,15 +43,20 @@
       }
     </style>
 
-    <title>UCS Layout</title>
+    <title>Urban Cruise Ship</title>
   </head>
   <body>
     <div class="py-14">
+
       <%- include('../partials/ucs-navbar.ejs') %>
         <!-- "max-w-screen-lg" limits the overall width of the website -->
         <!-- "mx-auto" center-justifies the (e.g. ucs.ejs) content in this layout -->
-        <main class="sm:max-w-screen-md lg:max-w-screen-lg mx-auto"><%- body %></main>
+        <main class="sm:max-w-screen-md lg:max-w-screen-lg mx-auto">
+          <%- body %>
+        </main>
+
       <%- include('../partials/ucs-footer.ejs') %>
+
     </div>
   </body>
 </html>
