@@ -1,20 +1,60 @@
 // Left off here:
-// https://youtu.be/La8wN7o-cL8
-
-
-
-
+// SASS Tutorial (build your own CSS library) #10 - Conditionals (@if)
+// https://youtu.be/QPZOvED3N_8
 
 /* Use this page to translate from SCSS to CSS */
-/* https://jsonformatter.org/scss-to-css */
+/* https://www.sassmeister.com/ */
 
+/* Alternatives that don't work as well */
+/* https://jsonformatter.org/scss-to-css */
 /* https://codebeautify.org/sass-to-css-converter */
 
 
 // import google font
+@use 'sass:math';
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@use 'sass:math';
+// theme colors
+$primary: #326dee;
+$secondary: #1ac886;
+$error: #d32752;
+$info: #f6c31c;
+
+// color palette
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "info": $info,
+  "blue": #1919e6,
+  "red": #e61919,
+  "yellow": #e6e619,
+  "green": #19e635,
+  "orange": #ffa600,
+  "purple": #9900ff,
+  "gray": #808080,
+  "black": black,
+  "white": white,
+);
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+
+// font sizes
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
 
 /* reset styles */
 * {
@@ -44,67 +84,39 @@ img {
   max-width: 100%;
 }
 
-// theme colors
-$primary: #326dee !default;
-$secondary: #1ac886 !default;
-$error: #d32752 !default;
-$info: #f6c31c !default;
-
-// spacing
-$base-padding: 0.75rem;
-$base-margin: 0.75rem;
-
-// borders
-$base-border-thickness: 1px;
-$base-border-radius: 20px;
-
-// box-shadow
-$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-
-// font sizes
-$base-font-size: 1rem;
-$font-size-sm: $base-font-size * 0.75;
-$font-size-lg: $base-font-size * 1.5;
-$font-size-xl: $base-font-size * 2;
-$font-size-xxl: $base-font-size * 3;
-
-h1 {
+.test {
   color: $primary;
-  margin-bottom: $base-margin;
-}
-a {
-  color: $secondary;
-}
-button {
-  color: white;
-  border: 0;
-  background: $primary;
-
-  border-radius: $base-border-radius;
-  padding: $base-padding;
-}
-.error {
-  color: $error;
-  border-color: $error;
-  border-style: solid;
-
-  margin: $base-margin;
-  padding: $base-padding;
-  border-radius: $base-border-radius;
-  border-width: $base-border-thickness;
-}
-.notification {
-  color: $secondary;
-  border-color: $secondary;
-  border-style: solid;
-
-  margin: $base-margin;
-  padding: $base-padding;
-  border-radius: $base-border-radius;
-  border-width: $base-border-thickness;
 }
 
-/* https://www.youtube.com/watch?v=vajsECys5Tc&list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&index=6 */
+@each $key, $val in $colors {
+  .text-#{$key} {
+    color: $val;
+  }
+  .bg-#{$key} {
+    background-color: $val;
+  }
+
+  // light variations
+  @for $i from 1 through 9 {
+    .text-#{$key}-light-#{$i} {
+      color: mix(white, $val, $i * 10);
+    }
+    .bg-#{$key}-light-#{$i} {
+      background-color: mix(white, $val, $i * 10);
+    }
+  }
+
+  // dark variations
+  @for $i from 1 through 9 {
+    .text-#{$key}-dark-#{$i} {
+      color: mix(black, $val, $i * 10);
+    }
+    .bg-#{$key}-dark-#{$i} {
+      background-color: mix(black, $val, $i * 10);
+    }
+  }
+}
+
 .card {
   display: block;
   padding: $base-padding;
@@ -112,9 +124,8 @@ button {
   box-shadow: $base-box-shadow;
   border-radius: $base-border-radius/4;
 
-  // nested selectors
   .card-title {
-    font-size: $font-size-lg;
+    font-size: $base-font-size;
     padding-bottom: $base-padding;
     font-weight: bold;
   }
