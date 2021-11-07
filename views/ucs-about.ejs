@@ -203,10 +203,29 @@
   }
 </style>
 
+<style media="screen">
+  @media only screen and (max-width: 550px) {
+    #desktop-title {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 551px) {
+    #mobile-n-tablet-title {
+      display: none;
+    }
+  }
+</style>
+
 <div class="">
   <br>
   <div class="mx-4">
-    <h1 class="arial-rounded-mt-bold flex justify-center text-3xl">About Urban Cruise Ship</h1>
+    <!-- this title is for the desktop view in which the entire title is visable -->
+    <h1 class="arial-rounded-mt-bold flex justify-center text-3xl" id="desktop-title">About Urban Cruise Ship</h1>
+
+    <!-- As screens get smaller, we want the "About" to be above the "Urban Cruise Ship" -->
+    <h1 class="arial-rounded-mt-bold flex justify-center text-3xl" id="mobile-n-tablet-title">About</h1>
+    <h1 class="arial-rounded-mt-bold flex justify-center text-3xl" id="mobile-n-tablet-title">Urban Cruise Ship</h1>
     <h4 class="flex justify-center prompt-font">Founded in 2014, Urban Cruise Ship presents environmental solutions.</h4>
   </div>
   <br>
