@@ -1,6 +1,6 @@
 // Left off here:
-// SASS Tutorial (build your own CSS library) #12 - Mixins
-// https://youtu.be/eW1nhSZaPEw
+// SASS Tutorial (build your own CSS library) #14 - Making Utility Classes
+// https://youtu.be/JIskeGNEVEk
 
 /* Use this page to translate from SCSS to CSS */
 /* https://www.sassmeister.com/ */
@@ -179,6 +179,13 @@ img {
   @include btn;
 }
 
+// function
+@function light-comp($color) {
+  $complement: complement($color);
+  $light-complement: lighten($complement, 30%);
+  @return $light-complement;
+}
+
 @each $key, $val in $colors {
   .btn-#{$key} {
     @include btn($val);
@@ -191,6 +198,14 @@ img {
     border: $base-border-thickness solid $val;
     &:hover {
       background-color: $val;
+    }
+  }
+  .btn-complement-#{$key} {
+    @include btn($val);
+    color: light-comp($val);
+    &:hover {
+      color: $val;
+      background-color: light-comp($val);
     }
   }
 }

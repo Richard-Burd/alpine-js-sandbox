@@ -57,6 +57,10 @@ app.get('/ucs', (req, res) => {
     res.render('ucs.ejs', {layout: './layouts/ucslayout'});
 });
 
+app.get('/ucs-about', (req, res) => {
+    res.render('ucs-about.ejs', {layout: './layouts/ucslayout'});
+});
+
 // https://stackoverflow.com/questions/16534545/how-to-get-rid-of-html-extension-when-serving-webpages-with-node-js
 // https://youtu.be/SccSCuHhOw0?t=1735
 app.use(express.static("views", {
