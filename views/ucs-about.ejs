@@ -343,22 +343,24 @@
 </div>
 
 <script type="text/javascript">
+  // this script is for accessability;
+  // the user can "tab" onto the accodion dropdown menu,
+  // then click the "Enter" key to have them all drop down for viewing...
+  // ...all without a mouse, since some users can't use a mouse.
+
+  // Get the input field
+  const myArray = document.getElementsByClassName("tab-label");
 
 
-// Get the input field
-const myArray = document.getElementsByClassName("tab-label");
+  document.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      console.log('enter is pressed!');
+      for (const myElement of myArray) {
+        console.log(myElement);
+        myElement.click();
+      }
 
-
-document.addEventListener("keyup", function(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    console.log('enter is pressed!');
-    for (const myElement of myArray) {
-      console.log(myElement);
-      myElement.click();
     }
-
-  }
-});
-
+  });
 </script>
