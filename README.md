@@ -147,6 +147,7 @@ NOTE: this file is not in this repository since it is in the `.gitignore` file; 
 
 Below is a schematic of the server and some of its basic functionality:
 ![package.json file](https://i.imgur.com/vKaAwdO.png)
+
 The important takeaway here is that each time we create a new page on the UCS website, we will need to create a new `app.get()` request for that page in the `./app.js` file.&nbsp;  In example, if you were to create a *contact* page at the following URL:
 `http://urbancruiseship.org/contact`
 ...you would need to enter a new line of code in `./app.js` that looks like this:
@@ -157,6 +158,7 @@ app.get('/contact', (req, res) => {
 ```
 Below we have a schematic showing the relationship between bodies, layouts, and partials:
 ![package.json file](https://i.imgur.com/LaeDbbA.png)
+
 Note that the `ucs-navbar.ejs` and body files such as `ucs.ejs` (the homepage) and `ucs-about.ejs` (the ./about page) both have significant amounts of css styling on them; this is because such stylings would normally go on the file located at:
  `./src/styles.css`
  ... and then get compiled to the file located at:
