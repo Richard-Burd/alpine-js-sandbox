@@ -48,7 +48,7 @@ Node.js, NVM, and NPM are required
 - [ ] A Google Sheets file can be iterated on and have a JSON file of it produced
 
 ### Nice to haves:
-- [ ] A web component can be put into an Alpine.js component like [this](https://codepen.io/James0r/pen/vYZBrRj)
+- [x] A web component can be put into an Alpine.js component like [this](https://codepen.io/James0r/pen/vYZBrRj)
 - [ ] An Alpine.js component can be put into a web component
 
 ## Project File Structure
@@ -119,3 +119,49 @@ alpine-js-sandbox
 ├── README.md
 └── tailwind.config.js
 ```
+## Urban Cruise Ship Website Documentation
+This section describes the Urban Cruise Ship (UCS) website architecture.  &nbsp;The UCS website uses the following plugins:
+1. **Node.js** - runtime environment
+2. **Express.js** - node module for routing of different paths & resources in the URI
+3. **Tailwind-CSS** - node module/CDN for styling
+
+In the future, Alpine.js may be added to the list but it is not used at the moment.
+<br><br><br>
+#### Installation instructions (Ubuntu):
+1. run: `$npm install` to install the node modules.
+2. run: `$npm start` to boot up the application
+
+### Getting Started
+Tailwind CSS is implemented so that it automatically updates every time the server is booted up with the  `npm start` command.&nbsp;  In the future you can add custom styling to the file located at `./src/styles.css` and those stylings will be automatically compiled to `./public/tailwind-css/styles.css` whenever you boot up the server.
+
+![package.json file](https://i.imgur.com/AhOAhzy.png)
+Currently, we are compiling the code in this repository and then copy/pasting it directly to the existing UCS website build; this means we must use the following CDN link for Tailwind-CSS that effectively allows us to ignore the two `.css` files mentioned above:
+
+`<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">`
+
+This link loads the **entire** Tailwind-CSS library and results in slower loading times, thus, when we use this repository (or another one like it) directly for the UCS website (instead of copy/pasting directly to the existing UCS website build) we will delete the link and use this link instead:
+
+`<link rel="stylesheet" type="text/css" href="./tailwind-css/styles.css">`
+
+NOTE: this file is not in this repository since it is in the `.gitignore` file; but it is generated upon entering `$npm start` into the terminal as described above.
+
+Below is a schematic of the server and some of its basic functionality:
+![package.json file](https://i.imgur.com/vKaAwdO.png)
+The important takeaway here is that each time we create a new page on the UCS website, we will need to create a new `app.get()` request for that page in the `./app.js` file.&nbsp;  In example, if you were to create a *contact* page at the following URL:
+`http://urbancruiseship.org/contact`
+...you would need to enter a new line of code in `./app.js` that looks like this:
+```javascript
+app.get('/contact', (req, res) => {
+  res.render('ucs-contact.ejs', {layout: './layouts/ucslayout'});
+});
+```
+Below we have a schematic showing the relationship between bodies, layouts, and partials:
+![package.json file](https://i.imgur.com/LaeDbbA.png)
+Note that the `ucs-navbar.ejs` and body files such as `ucs.ejs` (the homepage) and `ucs-about.ejs` (the ./about page) both have significant amounts of css styling on them; this is because such stylings would normally go on the file located at:
+ `./src/styles.css`
+ ... and then get compiled to the file located at:
+ `./public/tailwind-css/styles.css`
+ ... each time you boot the server with `$npm start`.&nbsp;  But since we are copy/pasting compiled HTML from this workspace to the existing UCS website build, that workflow will not work properly.&nbsp;  This is because, when using Tailwind-CSS, you cannot have *other* external css files besides the two mentioned above, or Tailwind will break.  
+<br><br><br>
+#### SASS/SCSS
+The `./about` page uses SASS/SCSS which gets compiled to CSS, but there is no built-in tool, plugin, or module (like [Gulp](https://www.npmjs.com/package/gulp-sass)) used in this workspace in the interest of keeping is as simple as possible.&nbsp;  Instead of an automated plugin, we are using [Sassmeister](https://www.sassmeister.com), which is an online SCSS to CSS converter anytime we want to compile any of our SCSS to CSS.

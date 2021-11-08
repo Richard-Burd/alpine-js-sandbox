@@ -33,12 +33,13 @@ app.use(express.static("public"));
 // https://youtu.be/lYVKbAn5Od0?t=248
 app.use(expressLayouts)
 
+// The "full-width.ejs" file is set here as the default layout
 // https://youtu.be/lYVKbAn5Od0?t=587
 app.set('layout', './layouts/full-width')
 
 app.set('view engine', 'ejs')
 
-// NOTE: We want to get rid of this and get the .ejs files to render statically like the .html files already do
+// NOTE: We don't specify the default layout here because we don't need to
 app.get('/layoutandpartials', (req, res) => {
   res.render('layoutandpartials.ejs')
 });
