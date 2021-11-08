@@ -230,7 +230,7 @@
   </div>
   <br>
 
-  <div class="flex justify-center prompt-font">
+  <div class="flex justify-center prompt-font" tabindex="1">
     <div class="max-w-xl">
       <div class="dropdown-tabs">
         <div class="row">
@@ -341,3 +341,24 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+
+
+// Get the input field
+const myArray = document.getElementsByClassName("tab-label");
+
+
+document.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    console.log('enter is pressed!');
+    for (const myElement of myArray) {
+      console.log(myElement);
+      myElement.click();
+    }
+
+  }
+});
+
+</script>
