@@ -51,5 +51,23 @@
     </template>
   </div>
 
+
+  <div x-data="{open: false}">
+      <button @mouseover="open = true" @keyup.tab="open = true">Category</button>
+      <div x-show="open" @mouseout="open = false" @keyup.tab="open = true" class="h-80 bg-red-900">
+          <ul>
+              <li>Sub-category 1</li>
+              <li>Sub-category 2</li>
+          </ul>
+      </div>
+  </div>
+
+
+  <div x-data @foo="alert('Button Was Clicked!')">
+      <button @click="$event.target.dispatchEvent(new CustomEvent('foo', { bubbles: true }))">...</button>
+  </div>
+
+
+
 </body>
 </html>

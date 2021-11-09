@@ -6,8 +6,11 @@
     <!-- this is what prevents the text & images from shrinking in the mobile versions -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <!-- Script you need to read alpine.js -->
-    <script defer src="//unpkg.com/alpinejs"></script>
+    <!-- Alpine Plugins https://alpinejs.dev/plugins/collapse -->
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- internal JavaScript file -->
     <script src="scripts/scripts.js"></script>
@@ -97,6 +100,45 @@
             </custom-web-component>
 
           </ul>
+        </div>
+
+        <br>
+
+        <div x-data="{ expanded: false }" class="bg-green-100">
+          <button @click="expanded = ! expanded" class="rounded-full m-2 px-2 py-1 bg-green-400 text-green-900">Special Alpine.js Animated Dropdown Button</button>
+          <div x-show="expanded" x-collapse.duration.500ms class="mx-2 px-2 text-green-900">
+            <p>
+              It is possible to have an animated dropdown button with
+              Alpine.js, but only with a special plugin called the
+              <a href="https://alpinejs.dev/plugins/collapse"><ins class="text-red-900">Collapse Plugin</ins></a>
+              Which requires an additional CDN link or NPM installations,
+              depending on how you are using it.
+            </p>
+            <br>
+            <p>
+              Reprehenderit eu excepteur ullamco esse cillum reprehenderit
+              exercitation labore non. Dolore dolore ea dolore veniam sint
+              in sint ex Lorem ipsum. Sint laborum deserunt deserunt amet
+              voluptate cillum deserunt. Amet nisi pariatur sit ut id.
+              Ipsum est minim est commodo id dolor sint id quis sint Lorem.
+              Reprehenderit eu excepteur ullamco esse cillum reprehenderit
+              exercitation labore non. Dolore dolore ea dolore veniam sint
+              in sint ex Lorem ipsum. Sint laborum deserunt deserunt amet
+              voluptate cillum deserunt. Amet nisi pariatur sit ut id.
+              Ipsum est minim est commodo id dolor sint id quis sint Lorem.
+              Reprehenderit eu excepteur ullamco esse cillum reprehenderit
+              exercitation labore non. Dolore dolore ea dolore veniam sint
+              in sint ex Lorem ipsum. Sint laborum deserunt deserunt amet
+              voluptate cillum deserunt. Amet nisi pariatur sit ut id.
+              Ipsum est minim est commodo id dolor sint id quis sint Lorem.
+              Reprehenderit eu excepteur ullamco esse cillum reprehenderit
+              exercitation labore non. Dolore dolore ea dolore veniam sint
+              in sint ex Lorem ipsum. Sint laborum deserunt deserunt amet
+              voluptate cillum deserunt. Amet nisi pariatur sit ut id.
+              Ipsum est minim est commodo id dolor sint id quis sint Lorem.
+            </p>
+            <br>
+          </div>
         </div>
 
         <br>

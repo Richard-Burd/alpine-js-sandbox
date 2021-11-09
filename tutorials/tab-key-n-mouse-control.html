@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Alpine.js Directives - x-if vs x-show with exampleIntroduction to alpinejs</title>
+
+    <!-- Alpine Plugins https://alpinejs.dev/plugins/collapse -->
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+  <body>
+
+    <div x-data="{ open: false }">
+      <button x-on:click="open = ! open">Toggle Dropdown</button>
+      <template x-show="open">
+        <div>
+          Dropdown contents...
+        </div>
+      </template>
+    </div>
+
+
+    <div x-data="{open: false}">
+        <button @mouseover="open = true" @keyup.tab="open = true">Category</button>
+        <div x-show="open" @mouseout="open = false" @keyup.tab="open = false" class="h-80 bg-red-900">
+            <ul>
+                <li>Sub-category 1</li>
+                <li>Sub-category 2</li>
+            </ul>
+        </div>
+    </div>
+
+    <div x-data="{ open: false }">
+      <button x-on:click="open = ! open">Toggle Dropdown</button>
+      <template x-show="open">
+        <div>
+          Dropdown contents...
+        </div>
+      </template>
+    </div>
+
+  </body>
+</html>
