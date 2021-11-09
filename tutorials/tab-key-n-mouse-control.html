@@ -2,8 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width-device-width, initial-scale-1.0">
     <title>Alpine.js Directives - x-if vs x-show with exampleIntroduction to alpinejs</title>
 
     <!-- Alpine Plugins https://alpinejs.dev/plugins/collapse -->
@@ -16,7 +14,7 @@
   <body>
 
     <div x-data="{ open: false }">
-      <button x-on:click="open = ! open">Toggle Dropdown</button>
+      <button x-on:click="open = ! open">I don't really work at all</button>
       <template x-show="open">
         <div>
           Dropdown contents...
@@ -26,7 +24,7 @@
 
 
     <div x-data="{open: false}">
-        <button @mouseover="open = true" @keyup.tab="open = true">Category</button>
+        <button @mouseover="open = true" @keyup.tab="open = true">Hover mouse over me</button>
         <div x-show="open" @mouseout="open = false" @keyup.tab="open = false" class="h-80 bg-red-900">
             <ul>
                 <li>Sub-category 1</li>
@@ -36,7 +34,7 @@
     </div>
 
     <div x-data="{ open: false }">
-      <button x-on:click="open = ! open">Toggle Dropdown</button>
+      <button x-on:click="open = ! open">I don't really work at all</button>
       <template x-show="open">
         <div>
           Dropdown contents...
@@ -44,5 +42,39 @@
       </template>
     </div>
 
+    <div x-data="{ open: false }">
+      <button class="manipulateme" @click="open = true">I'm and If-Else of Sorts</button>
+
+      <ul
+          x-show="open"
+          @click.away="open = false"
+      >
+          Dropdown Body
+      </ul>
+    </div>
+
   </body>
+  <script type="text/javascript">
+    // this script is for accessability;
+    // the user can "tab" onto the accodion dropdown menu,
+    // then click the "Enter" key to have them all drop down for viewing...
+    // ...all without a mouse, since some users can't use a mouse.
+
+    // Get the input field
+    const myArray = document.getElementsByClassName("manipulateme");
+
+
+    document.addEventListener("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      // Number 9 is the "Tab" key on the keyboard
+      if (event.keyCode === 9) {
+        console.log('enter is pressed!');
+        for (const myElement of myArray) {
+          console.log(myElement);
+          myElement.click();
+        }
+
+      }
+    });
+  </script>
 </html>

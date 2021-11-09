@@ -104,6 +104,21 @@
   }
 </script>
 
+<!-- causes the navbar to drop-down into view when the user clicks the "Tab" key -->
+<!-- this is an accessability feature for people who cannot use a mouse properly -->
+<script type="text/javascript">
+  document.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    // Number 9 is the "Tab" key on the keyboard
+    if (event.keyCode === 9) {
+      // this script is for accessability;
+      // the user can "tab" and when the tabindex falls onto the navigation bar,
+      // the navigation bar will drop-down into view
+      document.getElementById("navbar").style.top = "0px";
+    }
+  });
+</script>
+
 <!-- How TO - Hide Menu on Scroll -->
 <!-- https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp -->
 <style media="screen">
