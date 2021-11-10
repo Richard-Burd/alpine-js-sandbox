@@ -4,8 +4,14 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.8, minimum-scale=1.0">
     <meta charset="utf-8">
 
-    <!-- Script you need to read alpine.js -->
-    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <!-- Alpine Plugins https://alpinejs.dev/plugins/collapse -->
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
 
     <!-- NOTE: the layout must have this link in order for tailwind to work on the partials, but the layout cannot be styled with tailwind -->
     <!-- NOTE: the link must be from the './public' directory of the application as specified in 'package.json' here: "build-css:dev": "tailwindcss -i src/styles.css -o public/tailwind-css/styles.css" -->
@@ -47,7 +53,6 @@
   </head>
   <body>
     <div class="py-14">
-
       <%- include('../partials/ucs-navbar.ejs') %>
         <!-- "max-w-screen-lg" limits the overall width of the website -->
         <!-- "mx-auto" center-justifies the (e.g. ucs.ejs) content in this layout -->
