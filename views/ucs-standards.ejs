@@ -1,0 +1,40 @@
+<style media="screen">
+  @media only screen and (max-width: 550px) {
+    #desktop-title {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 551px) {
+    #mobile-n-tablet-title {
+      display: none;
+    }
+  }
+</style>
+
+<style media="screen">
+
+</style>
+
+<div class="bg-gray-100 text-gray-800">
+  <%- include ("./partials/ucs-specialized-sites-navbar.ejs") %>
+  <br>
+  <div class="mx-4">
+    <!-- this title is for the desktop view in which the entire title is visable -->
+    <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="desktop-title">Our Standards</h1>
+
+    <!-- As screens get smaller, we want the "About" to be above the "Urban Cruise Ship" -->
+    <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="mobile-n-tablet-title">Our Standards</h1>
+    <h4 class="bpg-arial-font flex justify-center">Urban Cruise Ship operates according to the following principles:</h4>
+  </div>
+  <br>
+  <%- include
+    ("./partials/ucs-first-button.ejs",
+      {
+        title:'Content',
+        description: "<p>under construction</p>"
+      }
+    )
+  %>
+  <br>
+  <br><br>
