@@ -1,9 +1,160 @@
+<!-- this component uses custom-colors not available in Tailwind-CSS -->
+<!-- these colors are "faded-out" version of the colors on the homepage for each of the specialized sites -->
+<style>
+  /* energy */
+  #spec-nav-1 {
+    background-color: #e0d9af;
+    color: #3d3b2f
+  }
+  #spec-nav-1:hover {
+    background-color: #47412b;
+    color: #e8dfbe;
+    transition-duration: 500ms;
+  }
+  #spec-nav-1:focus {
+    background-color: #47412b;
+    color: #e8dfbe;
+    transition-duration: 500ms;
+  }
+
+  /* matter */
+  #spec-nav-2 {
+    background-color: #a1cf8f;
+    color: #364232
+  }
+  #spec-nav-2:hover {
+    background-color: #364a29;
+    color: #def0d3;
+    transition-duration: 500ms;
+  }
+  #spec-nav-2:focus {
+    background-color: #364a29;
+    color: #def0d3;
+    transition-duration: 500ms;
+  }
+
+  /* habitat */
+  #spec-nav-3 {
+    background-color: #8fcfc1;
+    color: #324240
+  }
+  #spec-nav-3:hover {
+    background-color: #19363b;
+    color: #cee9ed;
+    transition-duration: 500ms;
+  }
+  #spec-nav-3:focus {
+    background-color: #19363b
+    color: #cee9ed;
+    transition-duration: 500ms;
+  }
+
+  /* cities */
+  #spec-nav-4 {
+    background-color: #cfa88f;
+    color: #453632
+  }
+  #spec-nav-4:hover {
+    background-color: #361612;
+    color: #edd9ce;
+    transition-duration: 500ms;
+  }
+  #spec-nav-4:focus {
+    background-color: #361612;
+    color: #edd9ce;
+    transition-duration: 500ms;
+  }
+
+  /* waste */
+  #spec-nav-5 {
+    background-color: #e0d9af;
+    color: #454532
+  }
+  #spec-nav-5:hover {
+    background-color: #362f12;
+    color: #e8e2ca;
+    transition-duration: 500ms;
+  }
+  #spec-nav-5:focus {
+    background-color: #362f12;
+    color: #e8e2ca;
+    transition-duration: 500ms;
+  }
+
+  /* oceans */
+  #spec-nav-6 {
+    background-color: #8fb3cf;
+    color: #323645
+  }
+  #spec-nav-6:hover {
+    background-color: #192542;
+    color: #cad3e8;
+    transition-duration: 500ms;
+  }
+  #spec-nav-6:focus {
+    background-color: #192542;
+    color: #cad3e8;
+    transition-duration: 500ms;
+  }
+
+  /* space */
+  #spec-nav-7 {
+    background-color: #adadad;
+    color: #474747
+  }
+  #spec-nav-7:hover {
+    background-color: #4a4a4a;
+    color: #e6e6e6;
+    transition-duration: 500ms;
+  }
+  #spec-nav-7:focus {
+    background-color: #4a4a4a;
+    color: #e6e6e6;
+    transition-duration: 500ms;
+  }
+
+  /* costs */
+  #spec-nav-8 {
+    background-color: #b0a880;
+    color: #414232
+  }
+  #spec-nav-8:hover {
+    background-color: #2e2e0e;
+    color: #e8e8c8;
+    transition-duration: 500ms;
+  }
+  #spec-nav-8:focus {
+    background-color: #2e2e0e;
+    color: #e8e8c8;
+    transition-duration: 500ms;
+  }
+
+  /* history */
+  #spec-nav-9 {
+    background-color: #91a8b8;
+    color: #202c40
+  }
+  #spec-nav-9:hover {
+    background-color: #2b323d;
+    color: #d5deed;
+    transition-duration: 500ms;
+  }
+  #spec-nav-9:focus {
+    background-color: #2b323d;
+    color: #d5deed;
+    transition-duration: 500ms;
+  }
+</style>
 <nav> <!-- first made for the "./about" page-->
-  <h1 class="some-two-three-four">This is the Secondary navigation bar</h1>
-  <div class="flex hidden md:flex items-center space-x-1 text-gray-900">
-    <a href="/ucs-about" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">About</a>
-    <a href="http://urbancruiseship.org/standards" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Standards</a>
-    <a href="http://urbancruiseship.org/team" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Crew</a>
-    <a href="http://urbancruiseship.org/activities" class="py-4 px-3 hover:bg-gray-900 hover:text-gray-100 focus:bg-gray-900 focus:text-gray-100 transition duration-500">Activities</a>
+  <div class="arial-rounded-mt-bold-font flex justify-between flex-wrap pt-3 px-3 pb-2 tracking-wide" style="border-bottom: 2px solid gray">
+    <a href="http://urbancruiseship.org/site/energy" class="m-1 px-2 rounded" id="spec-nav-1">ENERGY</a>
+    <a href="http://urbancruiseship.org/site/matter" class="m-1 px-2 rounded" id="spec-nav-2">MATTER</a>
+    <a href="http://urbancruiseship.org/site/habitat" class="m-1 px-2 rounded" id="spec-nav-3">HABITAT</a>
+    <a href="http://urbancruiseship.org/site/cities" class="m-1 px-2 rounded" id="spec-nav-4">CITIES</a>
+    <a href="http://urbancruiseship.org/site/waste" class="m-1 px-2 rounded" id="spec-nav-5">WASTE</a>
+    <a href="http://urbancruiseship.org/site/oceans" class="m-1 px-2 rounded" id="spec-nav-6">OCEANS</a>
+    <a href="http://urbancruiseship.org/site/space" class="m-1 px-2 rounded" id="spec-nav-7">SPACE</a>
+    <a href="http://urbancruiseship.org/site/costs" class="m-1 px-2 rounded" id="spec-nav-8">COSTS</a>
+    <a href="http://urbancruiseship.org/site/energy" class="m-1 px-2 rounded" id="spec-nav-9">HISTORY</a>
   </div>
 </nav>
