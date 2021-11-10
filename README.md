@@ -164,6 +164,3 @@ Note that the `ucs-navbar.ejs` and body files such as `ucs.ejs` (the homepage) a
  ... and then get compiled to the file located at:
  `./public/tailwind-css/styles.css`
  ... each time you boot the server with `$npm start`.&nbsp;  But since we are copy/pasting compiled HTML from this workspace to the existing UCS website build, that workflow will not work properly.&nbsp;  This is because, when using Tailwind-CSS, you cannot have *other* external css files besides the two mentioned above, or Tailwind will break.  
-<br><br><br>
-#### SASS/SCSS
-The `./about` page uses SASS/SCSS which gets compiled to CSS, but there is no built-in tool, plugin, or module (like [Gulp](https://www.npmjs.com/package/gulp-sass)) used in this workspace in the interest of keeping is as simple as possible.&nbsp;  Instead of an automated plugin, we are using [Sassmeister](https://www.sassmeister.com), which is an online SCSS to CSS converter anytime we want to compile any of our SCSS to CSS.

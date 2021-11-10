@@ -10,7 +10,7 @@
           border-top-right-radius: 70px 25px;
         }
         .shadow-geometry {
-          box-shadow: 4px 6px 6px gray;
+          box-shadow: 4px 6px 6px #86888f;
         }
         .shadow-geometry:hover {
           box-shadow: 4px 6px 6px #575757;
@@ -18,13 +18,13 @@
         }
       </style>
       <div x-data="{ expanded: false }" class="bg-gray-300 elliptical-geometry mx-2 shadow-geometry">
-        <button tabindex="1" @click="expanded = ! expanded" class="elliptical-geometry min-w-full bg-gray-400 duration-200 focus:bg-gray-600 focus:text-white hover:bg-gray-600 hover:text-white prompt-font transition px-2 py-1 rounded shadow-geometry text-gray-900 text-xl">
+        <button tabindex="1" @click="expanded = ! expanded" class="roboto-font elliptical-geometry min-w-full bg-gray-400 duration-200 focus:bg-gray-700 focus:text-white hover:bg-gray-700 hover:text-gray-100 prompt-font transition px-2 py-1 rounded shadow-geometry text-gray-900 text-xl">
           <div class="mx-2">
           <%- title %>
           </div>
         </button>
         <div x-show="expanded" x-collapse.duration.500ms>
-          <div class="prompt-font text-gray-900 px-8 py-4 text-justify">
+          <div class="bpg-arial-font prompt-font text-gray-900 px-8 py-4 text-justify">
             <%- description %>
           </div>
         </div>
