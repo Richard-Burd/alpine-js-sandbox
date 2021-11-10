@@ -1,0 +1,24 @@
+
+<center> <!-- first made for the "./about" page-->
+  <div class="max-w-xl">
+    <div class="min-w-full">
+      <style>
+        #button-caps {
+          border-bottom-left-radius: 70px 25px;
+          border-bottom-right-radius: 70px 25px;
+          border-top-left-radius: 70px 25px;
+          border-top-right-radius: 70px 25px;
+        }
+      </style>
+      <div x-data="{ expanded: false }" class="bg-gray-200 mx-2 shadow-lg" id="button-caps">
+        <button id="button-caps" @click="expanded = ! expanded" class="min-w-full bg-gray-400 duration-200 focus:bg-gray-600 focus:text-white hover:bg-gray-600 hover:text-white prompt-font transition px-2 py-1 rounded shadow-lg text-gray-900 text-xl">
+          <%- title %>
+        </button>
+        <div x-show="expanded" x-collapse.duration.500ms class="prompt-font text-gray-900">
+          <p><%- description %></p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
