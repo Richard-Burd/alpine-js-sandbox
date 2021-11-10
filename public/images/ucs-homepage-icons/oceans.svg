@@ -13,6 +13,12 @@
   <defs
      id="defs2">
     <rect
+       x="-3.928764"
+       y="-42.779875"
+       width="376.05706"
+       height="48.934619"
+       id="rect3029" />
+    <rect
        x="2832"
        y="1194"
        width="8"
@@ -581,7 +587,28 @@
          stdDeviation="0.54"
          id="feGaussianBlur2700" />
     </filter>
+    <rect
+       x="-3.9287641"
+       y="-42.779877"
+       width="376.05707"
+       height="48.93462"
+       id="rect3029-0" />
+    <rect
+       x="-3.9287641"
+       y="-42.779877"
+       width="376.05707"
+       height="48.93462"
+       id="rect3029-9" />
   </defs>
+  <rect
+     style="fill:#1c54dd;fill-opacity:1;stroke-width:0.279;stroke-linejoin:round;paint-order:markers fill stroke"
+     id="rect3804"
+     width="85.006813"
+     height="12.011827"
+     x="0.34649587"
+     y="-15.70778"
+     rx="14.78653"
+     ry="4.3788013" />
   <g
      id="layer1">
     <g
@@ -614,7 +641,7 @@
        style="font-style:italic;font-size:3.83967px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:'Calibri, Italic';font-variant-ligatures:none;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect142878)" />
     <path
        id="rect1083-3-0-2-4-67"
-       style="fill:#1c54dd;stroke-width:0.132392;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+       style="fill:#306bf1;stroke-width:0.132392;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke;fill-opacity:1"
        d="m 16.610068,1.4299587 h 54.357937 c 8.191739,0 14.786529,1.9529401 14.786529,4.3787889 V 38.692751 c 0,2.425849 -6.59479,4.378789 -14.786529,4.378789 H 16.610068 c -8.1917379,0 -14.7865288,-1.95294 -14.7865288,-4.378789 V 5.8087476 c 0,-2.4258488 6.5947909,-4.3787889 14.7865288,-4.3787889 z" />
     <g
        id="g59825-6-9-0"
@@ -761,4 +788,16 @@
       </g>
     </g>
   </g>
+  <text
+     xml:space="preserve"
+     transform="matrix(0.26458333,0,0,0.26458333,6.241797,-1.8920098)"
+     id="text3027"
+     style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.6667px;line-height:1;font-family:Calibri;-inkscape-font-specification:'Calibri Bold Italic';font-variant-ligatures:none;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect3029-9);fill:#ffffff;opacity:0.85"
+     x="-47.173828"
+     y="0"><tspan
+       x="-3.9296875"
+       y="-22.779272"
+       id="tspan7410"><tspan
+         style="text-align:start"
+         id="tspan7408">Previous Color: #1c54ddff</tspan></tspan></text>
 </svg>

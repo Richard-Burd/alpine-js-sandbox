@@ -581,6 +581,24 @@
          stdDeviation="0.54"
          id="feGaussianBlur2700" />
     </filter>
+    <rect
+       x="-3.9287641"
+       y="-42.779877"
+       width="376.05707"
+       height="48.93462"
+       id="rect3029" />
+    <rect
+       x="-3.9287641"
+       y="-42.779877"
+       width="376.05707"
+       height="48.93462"
+       id="rect3029-3" />
+    <rect
+       x="-3.9287641"
+       y="-42.779877"
+       width="376.05707"
+       height="48.93462"
+       id="rect3029-9" />
   </defs>
   <g
      id="layer1">
@@ -616,7 +634,7 @@
        id="g16529-2"
        transform="matrix(1.0048118,0,0,1.0048118,-117.65973,-3.4911764)">
       <rect
-         style="fill:#f7d49b;fill-opacity:1;stroke:none;stroke-width:0.131758;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         style="fill:#e3ab6f;fill-opacity:1;stroke:none;stroke-width:0.131758;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
          id="rect1083-3-0-22-5"
          width="83.529076"
          height="41.442169"
@@ -812,5 +830,26 @@
            id="path31445" />
       </g>
     </g>
+    <rect
+       style="fill:#f7d49b;fill-opacity:1;stroke-width:0.279;stroke-linejoin:round;paint-order:markers fill stroke"
+       id="rect3804"
+       width="85.006813"
+       height="12.011827"
+       x="0.90116358"
+       y="-15.640981"
+       rx="14.78653"
+       ry="4.3788013" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,6.7964644,-1.8252102)"
+       id="text3027-4"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.6667px;line-height:1;font-family:Calibri;-inkscape-font-specification:'Calibri Bold Italic';font-variant-ligatures:none;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect3029-9);opacity:0.85;fill:#000000"
+       x="-47.173828"
+       y="0"><tspan
+         x="-3.9296875"
+         y="-22.779272"
+         id="tspan1373"><tspan
+           style="text-align:start"
+           id="tspan1371">Previous Color: #f7d49bff</tspan></tspan></text>
   </g>
 </svg>

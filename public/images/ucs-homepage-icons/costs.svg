@@ -581,6 +581,18 @@
          stdDeviation="0.54"
          id="feGaussianBlur2700" />
     </filter>
+    <rect
+       x="-3.9287641"
+       y="-42.779877"
+       width="376.05707"
+       height="48.93462"
+       id="rect3029-9" />
+    <rect
+       x="-3.9287641"
+       y="-42.779877"
+       width="376.05707"
+       height="48.93462"
+       id="rect3029-9-0" />
   </defs>
   <g
      id="layer1">
@@ -617,7 +629,7 @@
        transform="matrix(1.0048118,0,0,1.0048118,-206.89817,-97.388575)">
       <path
          id="rect1083-3-0-3-0-7-74"
-         style="fill:#c4c338;stroke-width:0.131758;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         style="fill:#d4cb47;stroke-width:0.131758;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke;fill-opacity:1"
          d="m 222.43791,98.345314 h 54.09763 c 8.15251,0 14.71572,1.943586 14.71572,4.357816 v 32.72653 c 0,2.41424 -6.56321,4.35782 -14.71572,4.35782 h -54.09763 c -8.15251,0 -14.71573,-1.94358 -14.71573,-4.35782 v -32.72653 c 0,-2.41423 6.56322,-4.357816 14.71573,-4.357816 z" />
       <g
          id="g59833-3-0-0"
@@ -757,4 +769,25 @@
       </g>
     </g>
   </g>
+  <rect
+     style="fill:#c4c338;fill-opacity:1;stroke-width:0.279;stroke-linejoin:round;paint-order:markers fill stroke"
+     id="rect3804"
+     width="85.006813"
+     height="12.011827"
+     x="1.2715445"
+     y="-18.093029"
+     rx="14.78653"
+     ry="4.3788013" />
+  <text
+     xml:space="preserve"
+     transform="matrix(0.26458334,0,0,0.26458334,7.1668366,-4.2772624)"
+     id="text3027-4"
+     style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.6667px;line-height:1;font-family:Calibri;-inkscape-font-specification:'Calibri Bold Italic';font-variant-ligatures:none;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect3029-9-0);opacity:0.85;fill:#000000"
+     x="-47.173828"
+     y="0"><tspan
+       x="-3.9296875"
+       y="-22.779272"
+       id="tspan3433"><tspan
+         style="text-align:start"
+         id="tspan3431">Previous Color: #c4c338ff</tspan></tspan></text>
 </svg>
