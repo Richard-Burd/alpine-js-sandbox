@@ -9,20 +9,16 @@
     border-top-left-radius: 70px 25px;
     border-top-right-radius: 70px 25px;
   }
-  .shadow-geometry {
+  .shadow-geometry-no-hover-effects {
     box-shadow: 4px 6px 6px #86888f;
   }
-  .shadow-geometry:hover {
-    box-shadow: 4px 6px 6px #575757;
-    transition: 500ms;
-  }
 </style>
-<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry text-gray-900">
-    <i class="fa fa-check fa-2x float-left mt-4 ml-4" aria-hidden="true"></i>
-    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-2xl tracking-wider">
+<div class="bg-gray-300 elliptical-geometry max-w-xs m-8 shadow-geometry-no-hover-effects varela-round-font">
+    <i class="fa fa-check fa-2x float-left mt-4 ml-4 text-gray-700" aria-hidden="true"></i>
+    <h2 class="bg-gray-400 elliptical-geometry-top font-semibold pl-14 p-3 text-xl tracking-wider text-gray-700">
       <%- title %>
     </h2>
-    <p class="p-4 pb-6">
+    <p class="p-4 pb-6 text-gray-800">
       <%- description %>
     </p>
 </div>
