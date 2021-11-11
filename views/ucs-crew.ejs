@@ -33,10 +33,10 @@
   <%- include ("./partials/ucs-specialized-sites-navbar.ejs") %>
   <br>
   <div class="mx-4">
-    <!-- this title is for the desktop view in which the entire title is visable -->
+    <!-- Larger screens can handle a larger font -->
     <h1 class="arial-rounded-mt-bold-font flex justify-center text-4xl" id="desktop-title">The Crew</h1>
 
-    <!-- As screens get smaller, we want the "About" to be above the "Urban Cruise Ship" -->
+    <!-- As screens get smaller, we want a smaller font -->
     <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="mobile-n-tablet-title">The Crew</h1>
     <h4 class="bpg-arial-font flex justify-center">Urban Cruise Ship is comprised of the following current and past crewmembers.</h4>
   </div>
@@ -190,109 +190,112 @@
         <br><br>
       </center>
     </div>
-
-    <br><br><br><br><br>
-
-    <div>
-      <div class="border-b-4 border-gray-500 text-3xl">
-        <div tabindex="11" class="bpg-arial-font mx-3">Richard Burd</div>
-      </div>
-      <div class="bg-gray-200 px-8 py-2 text-justify">
-        <p>
-          Richard Burd is an assistant researcher at Urban Cruise Ship.
-        </p>
-        <br>
-        <p>
-          Richard has a B.A in Middle Eastern studies and a is a graduate of the
-          Flatiron School’s Full-Stack web development program.&nbsp; He began
-          his career in California as an architectural draftsman where he helped
-          design affordable housing projects built across the Los Angeles
-          basin.&nbsp; He later worked as a technician and technical writer for
-          drones used in agricultural surveys to improve crop yields and reduce
-          input requirements.
-        </p>
-        <br>
-        <p>
-          Richard was commissioned as a U.S. Army 2nd Lieutenant in 2008 and
-          served in Afghanistan as a logistics officer. There he worked on
-          implementing the Afghan Transportation Network which employed local
-          Afghan civilian truckers (instead of American military contractors)
-          and awarded indegenious groups roughly $2 million in contracts.
-        </p>
-        <br>
-        <p>
-          Richard’s volunteer work includes assisting Kurdish militias in
-          northern Iraq during their war with the Islamic State (ISIS) in 2016
-          where he served as an interpreter and drone pilot.&nbsp; His interests
-          include rapid prototyping, (software/hardware) unmanned aviation,
-          and social psychology.
-        </p>
-        <br>
-        <center class="text-blue-900">
-          <a tabindex="12" href="https://www.linkedin.com/in/richardburd/" class="duration-500 ease-in-out focus:opacity-90 hover:opacity-90 mx-2 sm:mx-8 opacity-40 transition">
-            <i class="fab fa-linkedin fa-3x"></i>
-          </a>
-          <a tabindex="13" href="https://richard-burd.github.io/" class="duration-500 ease-in-out focus:opacity-90 hover:opacity-90 mx-2 sm:mx-8 opacity-40 transition">
-            <i class="fas fa-home fa-3x"></i>
-          </a>
-          <a tabindex="14" href="https://github.com/Richard-Burd" class="duration-500 ease-in-out focus:opacity-90 hover:opacity-90 mx-2 sm:mx-8 opacity-40 transition">
-            <i class="fab fa-github fa-3x"></i>
-          </a>
-          <a tabindex="15" href="mailto:richard@urbancruiseship.org" class="duration-500 ease-in-out focus:opacity-90 hover:opacity-90 mx-2 sm:mx-8 opacity-40 transition">
-            <i class="fas fa-envelope-square fa-3x"></i>
-          </a>
-          <br><br>
-        </center>
-      </div>
-
-      <br><br><br><br><br><br><br><br>
-
-      <div class="mx-4">
-        <!-- this title is for the desktop view in which the entire title is visable -->
-        <h1 class="arial-rounded-mt-bold-font flex justify-center text-4xl" id="desktop-title">Past Crew</h1>
-
-        <!-- As screens get smaller, we want the "About" to be above the "Urban Cruise Ship" -->
-        <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="mobile-n-tablet-title">Past Crew</h1>
-      </div>
-
-      <div>
-        <div class="border-b-4 border-gray-500 text-3xl">
-          <div tabindex="16" class="bpg-arial-font mx-3">Andrew Evans</div>
-        </div>
-        <div class="bg-gray-200 px-8 py-2 text-justify">
-          <p>
-            Andrew Evans was a researcher and exhibit producer with Urban
-            Cruise Ship.
-          </p>
-          <br>
-          <p>
-            Andrew has an MS degree in sociology.&nbsp; He has participated in
-            Nashville/Davidson County activities for Recycling Advocates of
-            Middle Tennessee.
-          </p>
-          <br>
-        </div>
-      </div>
-
-      <br><br><br><br>
-
-      <div>
-        <div class="border-b-4 border-gray-500 text-3xl">
-          <div tabindex="17" class="bpg-arial-font mx-3">Al-Fassi Jones</div>
-        </div>
-        <div class="bg-gray-200 px-8 py-2 text-justify">
-          <p>
-            Al-Fassi Jones was a part-time researcher and exhibit producer with
-            Urban Cruise Ship.
-          </p>
-          <br>
-          <p>
-            Al has education in accounting and work experience in retail sales.
-          </p>
-          <br>
-        </div>
-      </div>
-
   </div>
 
+  <br><br><br><br><br>
+
+  <div>
+    <div class="border-b-4 border-gray-500 text-3xl">
+      <div tabindex="11" class="bpg-arial-font mx-3">Richard Burd</div>
+    </div>
+    <div class="bg-gray-200 px-8 py-2 text-justify">
+      <p>
+        Richard Burd is an assistant researcher at Urban Cruise Ship.
+      </p>
+      <br>
+      <p>
+        Richard has a B.A in Middle Eastern studies and a is a graduate of the
+        Flatiron School’s Full-Stack web development program.&nbsp; He began
+        his career in California as an architectural draftsman where he helped
+        design affordable housing projects built across the Los Angeles
+        basin.&nbsp; He later worked as a technician and technical writer for
+        drones used in agricultural surveys to improve crop yields and reduce
+        input requirements.
+      </p>
+      <br>
+      <p>
+        Richard was commissioned as a U.S. Army 2nd Lieutenant in 2008 and
+        served in Afghanistan as a logistics officer. There he worked on
+        implementing the Afghan Transportation Network which employed local
+        Afghan civilian truckers (instead of American military contractors)
+        and awarded indegenious groups roughly $2 million in contracts.
+      </p>
+      <br>
+      <p>
+        Richard’s volunteer work includes assisting Kurdish militias in
+        northern Iraq during their war with the Islamic State (ISIS) in 2016
+        where he served as an interpreter and drone pilot.&nbsp; His interests
+        include rapid prototyping, (software/hardware) unmanned aviation,
+        and social psychology.
+      </p>
+      <br>
+      <center class="text-blue-900">
+        <a tabindex="12" href="https://www.linkedin.com/in/richardburd/" class="duration-500 ease-in-out focus:opacity-90 hover:opacity-90 mx-2 sm:mx-8 opacity-40 transition">
+          <i class="fab fa-linkedin fa-3x"></i>
+        </a>
+        <a tabindex="13" href="https://richard-burd.github.io/" class="duration-500 ease-in-out focus:opacity-90 hover:opacity-90 mx-2 sm:mx-8 opacity-40 transition">
+          <i class="fas fa-home fa-3x"></i>
+        </a>
+        <a tabindex="14" href="https://github.com/Richard-Burd" class="duration-500 ease-in-out focus:opacity-90 hover:opacity-90 mx-2 sm:mx-8 opacity-40 transition">
+          <i class="fab fa-github fa-3x"></i>
+        </a>
+        <a tabindex="15" href="mailto:richard@urbancruiseship.org" class="duration-500 ease-in-out focus:opacity-90 hover:opacity-90 mx-2 sm:mx-8 opacity-40 transition">
+          <i class="fas fa-envelope-square fa-3x"></i>
+        </a>
+        <br><br>
+      </center>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br><br><br><br><br>
+
+<div class="bg-gray-100 roboto-font text-gray-800">
+  <div class="mx-4">
+    <!-- Larger screens can handle a larger font -->
+    <h1 class="arial-rounded-mt-bold-font flex justify-center pt-8 text-4xl" id="desktop-title">Past Crew</h1>
+
+    <!-- As screens get smaller, we want a smaller font -->
+    <h1 class="arial-rounded-mt-bold-font flex justify-center pt-4 text-3xl" id="mobile-n-tablet-title">Past Crew</h1>
+  </div>
+
+  <br>
+
+  <div>
+    <div class="border-b-4 border-gray-500 text-3xl">
+      <div tabindex="16" class="bpg-arial-font mx-3">Andrew Evans</div>
+    </div>
+    <div class="bg-gray-200 px-8 py-2 text-justify">
+      <p>
+        Andrew Evans was a researcher and exhibit producer with Urban
+        Cruise Ship.
+      </p>
+      <br>
+      <p>
+        Andrew has an MS degree in sociology.&nbsp; He has participated in
+        Nashville/Davidson County activities for Recycling Advocates of
+        Middle Tennessee.
+      </p>
+      <br>
+    </div>
+  </div>
+
+  <br><br><br><br>
+
+  <div>
+    <div class="border-b-4 border-gray-500 text-3xl">
+      <div tabindex="17" class="bpg-arial-font mx-3">Al-Fassi Jones</div>
+    </div>
+    <div class="bg-gray-200 px-8 py-2 text-justify">
+      <p>
+        Al-Fassi Jones was a part-time researcher and exhibit producer with
+        Urban Cruise Ship.
+      </p>
+      <br>
+      <p>
+        Al has education in accounting and work experience in retail sales.
+      </p>
+      <br>
+    </div>
+  </div>
 </div>
