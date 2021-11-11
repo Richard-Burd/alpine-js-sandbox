@@ -10,31 +10,108 @@
       display: none;
     }
   }
+  .elliptical-geometry-top {
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .elliptical-geometry {
+    border-bottom-left-radius: 70px 25px;
+    border-bottom-right-radius: 70px 25px;
+    border-top-left-radius: 70px 25px;
+    border-top-right-radius: 70px 25px;
+  }
+  .shadow-geometry {
+    box-shadow: 4px 6px 6px #86888f;
+  }
+  .shadow-geometry:hover {
+    box-shadow: 4px 6px 6px #575757;
+    transition: 500ms;
+  }
 </style>
 
-<style media="screen">
-
-</style>
-
-<div class="bg-gray-100 text-gray-800">
+<div class="bg-gray-100 roboto-font text-gray-800">
   <%- include ("./partials/ucs-specialized-sites-navbar.ejs") %>
   <br>
   <div class="mx-4">
     <!-- this title is for the desktop view in which the entire title is visable -->
-    <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="desktop-title">Our Standards</h1>
+    <h1 class="arial-rounded-mt-bold-font flex justify-center text-4xl" id="desktop-title">Our Standards</h1>
 
     <!-- As screens get smaller, we want the "About" to be above the "Urban Cruise Ship" -->
     <h1 class="arial-rounded-mt-bold-font flex justify-center text-3xl" id="mobile-n-tablet-title">Our Standards</h1>
     <h4 class="bpg-arial-font flex justify-center">Urban Cruise Ship operates according to the following principles:</h4>
   </div>
-  <br>
-  <%- include
-    ("./partials/ucs-first-button.ejs",
-      {
-        title:'Content',
-        description: "<p>under construction</p>"
-      }
-    )
-  %>
-  <br>
-  <br><br>
+
+  <br><br><br>
+
+  <div class="">
+    <div class="arial-rounded-mt-bold-font border-b-4 border-gray-500 text-3xl">
+      <div class="mx-3">Content</div>
+    </div>
+  </div>
+
+  <div class="flex-wrap grid grid-cols-3 bg-gray-200">
+
+    <%- include
+      ("./partials/ucs-first-panel.ejs",
+        {
+          title:'Data-Driven',
+          description: "Our work is driven by data and science, not ideology, opinion, and special interest."
+        }
+      )
+    %>
+
+    <%- include
+      ("./partials/ucs-first-panel.ejs",
+        {
+          title:'Unconflicted',
+          description: "Urban Cruise Ship does not accept funding from corporate entities which might skew our findings."
+        }
+      )
+    %>
+
+    <%- include
+      ("./partials/ucs-first-panel.ejs",
+        {
+          title:'Revelatory',
+          description: "We reveal what ought to be known -- not necessarily what is expected."
+        }
+      )
+    %>
+
+    <%- include
+      ("./partials/ucs-first-panel.ejs",
+        {
+          title:'Comprehensive',
+          description: "Urban Cruise Ship analyzes the issues from engineering, economic, social, and political perspectives.&nbsp; Comprehensiveness should increase the likelihood that solutions will be workable."
+        }
+      )
+    %>
+
+    <%- include
+      ("./partials/ucs-first-panel.ejs",
+        {
+          title:'Effective',
+          description: "Urban Cruise Ship seeks to provide for policymakers, business leaders, and individuals the most relevant and effective solutions to today's most pressing ecological challenges."
+        }
+      )
+    %>
+
+    <%- include
+      ("./partials/ucs-first-panel.ejs",
+        {
+          title:'Applicable',
+          description: "Widespread applicability is sought. Appropriate exceptions should be clearly noted."
+        }
+      )
+    %>
+  </div>
+
+  <br><br><br>
+
+  <div class="">
+    <div class="arial-rounded-mt-bold-font border-b-4 border-gray-500 text-3xl">
+      <div class="mx-3">Content/Presentation</div>
+    </div>
+  </div>
+
+</div>

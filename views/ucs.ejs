@@ -33,27 +33,6 @@
 </div>
 <div class="gap-2 justify-center grid lg:grid-cols-3 md:grid-cols-2 bg-gray-100 p-10">
 
-
-  <!-- this is an attempt to use Tailwind.css to render the "dark" icons... we'll use Alpine.js instead -->
-  <!--
-  <a href="http://urbancruiseship.org/site/energy">
-    <span class="absolute text-purple-700 text-opacity-0 text-xs">Energy production, distribution, and consumption</span>
-    <img class="transform hover:opacity-0 transition duration-300" src="/images/ucs-homepage-icons/energy.svg" alt="icon that is a link to the energy site">
-    <img class="opacity-0 transform hover:opacity-100 transition duration-300" src="/images/ucs-homepage-icons/energy-dark.svg" alt="">
-  </a>
-  -->
-
-  <!-- this is an attempt to use Alpine.js to render the "dark" icons... this is under construction -->
-  <!--
-  <div x-data="{open: true}">
-    <a href="http://urbancruiseship.org/site/energy">
-      <span class="absolute text-purple-700 text-opacity-0 text-xs">energy production, distribution, and consumption</span>
-      <img x-show="open" @mouseout="open = false" src="/images/ucs-homepage-icons/energy.svg" alt="icon that is a link to the matter site">
-      <img x-show="" @mouseout="open = true" src="/images/ucs-homepage-icons/energy-dark.svg" alt="icon that is a link to the matter site">
-    </a>
-  </div>
-  -->
-
   <a class="transform focus:scale-110 transition duration-300" href="http://urbancruiseship.org/site/energy">
     <span class="absolute text-purple-700 text-opacity-0 text-xs">energy production, distribution, and consumption</span>
     <img class="transform hover:scale-110 transition duration-300" src="/images/ucs-homepage-icons/energy.svg" alt="icon that is a link to the matter site">
@@ -98,4 +77,5 @@
     <span class="absolute text-purple-700 text-opacity-0 text-xs">history, past and future progress</span>
     <img class="transform hover:scale-110 transition duration-300" src="/images/ucs-homepage-icons/history.svg" alt="icon that is a link to the oceans site">
   </a>
+  
 </div>

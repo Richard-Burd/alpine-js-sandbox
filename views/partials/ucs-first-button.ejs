@@ -3,6 +3,22 @@
   <div class="max-w-xl">
     <div class="min-w-full">
       <style>
+        /*  these are pure-gray colors with no blue mixed in them at all, which
+            is the case with the default Tailwind-CSS gray color pallete, we are
+            not using any of these on the new website at the moment because they
+            don't work as well with the contrasting black-to-white text on hover,
+            buy we may want to use them in the future
+        */
+        .standard-gray { /* no blue mixed in, just pure grey */
+          background-color: #777777ff;
+        }
+        .standard-gray-light { /* no blue mixed in, just pure grey */
+          background-color: #f1f1f1ff;
+        }
+        .standard-gray-dark { /* no blue mixed in, just pure grey */
+          background-color: #555555ff;
+        }
+
         .elliptical-geometry {
           border-bottom-left-radius: 70px 25px;
           border-bottom-right-radius: 70px 25px;
