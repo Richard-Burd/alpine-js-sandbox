@@ -78,6 +78,9 @@ app.get('/site/history/endeavors', (req, res) => {
   res.render('site/history/endeavors.ejs', {layout: './layouts/ucslayout'});
 });
 
+// get the JSON served so we can access it as a resource
+app.get('/site/history/data_out.json', (req, res) => { });
+
 // https://stackoverflow.com/questions/16534545/how-to-get-rid-of-html-extension-when-serving-webpages-with-node-js
 // https://youtu.be/SccSCuHhOw0?t=1735
 app.use(express.static("views", {

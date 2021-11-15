@@ -1,5 +1,19 @@
 <div>
   <style>
+    @media only screen and (max-width: 500px) {
+      .table-titles, .table-cells {
+        font-size: 9px;
+        line-height: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 390px) {
+      .table-titles, .table-cells {
+        font-size: 6px;
+        line-height: 100%;
+      }
+    }
+
     body {
       /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
       /*font-size: 14px; */
@@ -100,4 +114,6 @@
 
   <!-- This is necessary to generate the dynamic endeavor set tables -->
   <script src="endeavor-displays-by-set.js"></script>
+
+  <script src="test-script.js"></script>
 </div>
