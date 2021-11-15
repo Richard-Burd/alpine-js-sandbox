@@ -165,4 +165,10 @@ Note that the `ucs-navbar.ejs` and body files such as `ucs.ejs` (the homepage) a
  `./src/styles.css`
  ... and then get compiled to the file located at:
  `./public/tailwind-css/styles.css`
- ... each time you boot the server with `$npm start`.&nbsp;  But since we are copy/pasting compiled HTML from this workspace to the existing UCS website build, that workflow will not work properly.&nbsp;  This is because, when using Tailwind-CSS, you cannot have *other* external css files besides the two mentioned above, or Tailwind will break.  
+ ... each time you boot the server with `$npm start`.&nbsp;  But since we are copy/pasting compiled HTML from this workspace to the existing UCS website build, that workflow will not work properly.&nbsp;  This is because, when using Tailwind-CSS, you cannot have *other* external css files besides the two mentioned above, or Tailwind will break.&nbsp;  Therefore, for simplicity purposes, we are putting non-Tailwind-css styling directly onto the `.ejs` files for now.&nbsp;  Once we are using this repository to serve content directly to http://urbancruiseship.org, we may remove all of the css styling from the `.ejs` files and put that styling [here](https://github.com/Richard-Burd/alpine-js-sandbox/blob/main/src/styles.css) in the proper location at: `"./src/styles.css"`
+
+Below we have a schematic wiring diagram showing how the `"./about"` page works:
+
+![enter image description here](https://i.imgur.com/bqJIU0w.jpg)
+
+This diagram shows the use & integration of [Alpine.js](https://alpinejs.dev/) in the lower left-hand corner, where it is highlighted in blue.&nbsp;  The Elbedded JavaScript Templating (.ejs) is highlighted in neon green.&nbsp;
