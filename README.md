@@ -135,6 +135,7 @@ In the future, Alpine.js may be added to the list but it is not used at the mome
 Tailwind CSS is implemented so that it automatically updates every time the server is booted up with the  `npm start` command.&nbsp;  In the future you can add custom styling to the file located at `./src/styles.css` and those stylings will be automatically compiled to `./public/tailwind-css/styles.css` whenever you boot up the server.
 
 ![package.json file](https://i.imgur.com/AhOAhzy.png)
+
 Currently, we are compiling the code in this repository and then copy/pasting it directly to the existing UCS website build; this means we must use the following CDN link for Tailwind-CSS that effectively allows us to ignore the two `.css` files mentioned above:
 
 `<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">`
@@ -146,6 +147,7 @@ This link loads the **entire** Tailwind-CSS library and results in slower loadin
 NOTE: this file is not in this repository since it is in the `.gitignore` file; but it is generated upon entering `$npm start` into the terminal as described above.
 
 Below is a schematic of the server and some of its basic functionality:
+
 ![package.json file](https://i.imgur.com/vKaAwdO.png)
 
 The important takeaway here is that each time we create a new page on the UCS website, we will need to create a new `app.get()` request for that page in the `./app.js` file.&nbsp;  In example, if you were to create a *contact* page at the following URL:

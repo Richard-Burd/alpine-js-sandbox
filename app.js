@@ -50,28 +50,32 @@ app.get('/myfolder/nested', (req, res) => {
 
 // NOTE: this one specifies a non-default layout whereas the two above use the default layout at: './layouts/full-width'
 app.get('/ramhome', (req, res) => {
-    res.render('ramhome.ejs', {layout: './layouts/ramlayout'});
+  res.render('ramhome.ejs', {layout: './layouts/ramlayout'});
 });
 
 // NOTE: this one specifies a non-default layout whereas the two above use the default layout at: './layouts/full-width'
 app.get('/ucs', (req, res) => {
-    res.render('ucs.ejs', {layout: './layouts/ucslayout'});
+  res.render('ucs.ejs', {layout: './layouts/ucslayout'});
 });
 
 app.get('/ucs-about', (req, res) => {
-    res.render('ucs-about.ejs', {layout: './layouts/ucslayout'});
+  res.render('ucs-about.ejs', {layout: './layouts/ucslayout'});
 });
 
 app.get('/ucs-standards', (req, res) => {
-    res.render('ucs-standards.ejs', {layout: './layouts/ucslayout'});
+  res.render('ucs-standards.ejs', {layout: './layouts/ucslayout'});
 });
 
 app.get('/ucs-crew', (req, res) => {
-    res.render('ucs-crew.ejs', {layout: './layouts/ucslayout'});
+  res.render('ucs-crew.ejs', {layout: './layouts/ucslayout'});
 });
 
 app.get('/ucs-activities', (req, res) => {
-    res.render('ucs-activities.ejs', {layout: './layouts/ucslayout'});
+  res.render('ucs-activities.ejs', {layout: './layouts/ucslayout'});
+});
+
+app.get('/site/history/endeavors', (req, res) => {
+  res.render('site/history/endeavors.ejs', {layout: './layouts/ucslayout'});
 });
 
 // https://stackoverflow.com/questions/16534545/how-to-get-rid-of-html-extension-when-serving-webpages-with-node-js
