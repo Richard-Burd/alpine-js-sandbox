@@ -106,6 +106,7 @@
       color:red;
     }
   </style>
+  <center class="m-8">Endeavors</center>
   <!-- the dynamic accordians will display inside this div  -->
   <!-- these dynamic accordians house the dynamic endeavor set tables -->
   <div class="sets-accordion-group">
@@ -113,7 +114,15 @@
   </div>
 
   <!-- This is necessary to generate the dynamic endeavor set tables -->
-  <script src="endeavor-displays-by-set.js"></script>
-
-  <script src="test-script.js"></script>
+  <!-- <script src="endeavor-displays-by-set.js"></script> -->
+  <!--
+        Our file is located at './site/history/endeavors' but we want to
+        render it as './topic/history/endeavors' so we need the path below
+        because when Express.js renders the resource, the resource ('./endeavors')
+        thinks it is located at './site/history/endeavors' and so it will use that
+        directory as a starting point to find any files in the application it is
+        calling on
+  -->
+  <script src="../../site/history/endeavor-displays-by-set.js"></script>
+  <script src="../../site/history/test-script.js"></script>
 </div>

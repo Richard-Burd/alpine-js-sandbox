@@ -738,8 +738,13 @@ let list_of_sets = [];
 
 // this is a counter to keep track of where the images are stored
 let sets_counter_for_image_directories = 0;
-// this is the image directory
-const IMAGE_DIRECTORY = "resources/endeavors/images/";
+
+// this is the image directory; we don't include the './public' folder in the
+// path because in the server ('./app.js') we specify the server to use:
+// app.use(express.static("public"));
+// ...which means resources in the "./public" folder don't include '/public'
+// in the pathway
+const IMAGE_DIRECTORY = "../../../../images/endeavor-set-images/";
 
 // create an individual accordion
 function createAccordion(title) {
@@ -761,28 +766,28 @@ function createAccordion(title) {
   // this is the first of the three images
   let accordionBuilder4 = document.createElement("img");
   accordionBuilder4.setAttribute("class", "endeavor-image");
-  //accordionBuilder4.setAttribute(
-  //  "src",
-  //  `${IMAGE_DIRECTORY}${sets_counter_for_image_directories}/1.jpg`
-  //);
+  accordionBuilder4.setAttribute(
+    "src",
+    `${IMAGE_DIRECTORY}${sets_counter_for_image_directories}/1.jpg`
+  );
   accordionBuilder4.setAttribute("title", "endeavor-image");
 
   // this is the second of the three images
   let accordionBuilder5 = document.createElement("img");
   accordionBuilder5.setAttribute("class", "endeavor-image");
-  //accordionBuilder5.setAttribute(
-  //  "src",
-  //  `${IMAGE_DIRECTORY}${sets_counter_for_image_directories}/2.jpg`
-  //);
+  accordionBuilder5.setAttribute(
+    "src",
+    `${IMAGE_DIRECTORY}${sets_counter_for_image_directories}/2.jpg`
+  );
   accordionBuilder5.setAttribute("title", "endeavor-image");
 
   // this is the third of the three images
   let accordionBuilder6 = document.createElement("img");
   accordionBuilder6.setAttribute("class", "endeavor-image");
-  //accordionBuilder6.setAttribute(
-  //  "src",
-  //  `${IMAGE_DIRECTORY}${sets_counter_for_image_directories}/3.jpg`
-  //);
+  accordionBuilder6.setAttribute(
+    "src",
+    `${IMAGE_DIRECTORY}${sets_counter_for_image_directories}/3.jpg`
+  );
   accordionBuilder6.setAttribute("title", "endeavor-image");
 
   // this is the first of the six text areas

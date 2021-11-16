@@ -74,7 +74,8 @@ app.get('/ucs-activities', (req, res) => {
   res.render('ucs-activities.ejs', {layout: './layouts/ucslayout'});
 });
 
-app.get('/site/history/endeavors', (req, res) => {
+// the specialized sites have URL pathways at variance with the file structure:
+app.get('/topic/history/endeavors', (req, res) => {
   res.render('site/history/endeavors.ejs', {layout: './layouts/ucslayout'});
 });
 
