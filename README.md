@@ -134,7 +134,7 @@ In the future, Alpine.js may be added to the list but it is not used at the mome
 ### Getting Started
 Tailwind CSS is implemented so that it automatically updates every time the server is booted up with the  `npm start` command.&nbsp;  In the future you can add custom styling to the file located at `./src/styles.css` and those stylings will be automatically compiled to `./public/tailwind-css/styles.css` whenever you boot up the server.
 
-![package.json file](https://i.imgur.com/AhOAhzy.png)
+![an image of the package.json file](https://i.imgur.com/AhOAhzy.png)
 
 Currently, we are compiling the code in this repository and then copy/pasting it directly to the existing UCS website build; this means we must use the following CDN link for Tailwind-CSS that effectively allows us to ignore the two `.css` files mentioned above:
 
@@ -148,7 +148,7 @@ NOTE: this file is not in this repository since it is in the `.gitignore` file; 
 
 Below is a schematic of the server and some of its basic functionality:
 
-![package.json file](https://i.imgur.com/vKaAwdO.png)
+![a schematic of the server and some of its basic functionality](https://i.imgur.com/vKaAwdO.png)
 
 The important takeaway here is that each time we create a new page on the UCS website, we will need to create a new `app.get()` request for that page in the `./app.js` file.&nbsp;  In example, if you were to create a *contact* page at the following URL:
 `http://urbancruiseship.org/contact`
@@ -159,7 +159,7 @@ app.get('/contact', (req, res) => {
 });
 ```
 Below we have a schematic showing the relationship between bodies, layouts, and partials:
-![package.json file](https://i.imgur.com/LaeDbbA.png)
+![a schematic showing the relationship between bodies, layouts, and partials](https://i.imgur.com/LaeDbbA.png)
 
 Note that the `ucs-navbar.ejs` and body files such as `ucs.ejs` (the homepage) and `ucs-about.ejs` (the ./about page) both have significant amounts of css styling on them; this is because such stylings would normally go on the file located at:
  `./src/styles.css`
@@ -169,6 +169,15 @@ Note that the `ucs-navbar.ejs` and body files such as `ucs.ejs` (the homepage) a
 
 Below we have a schematic wiring diagram showing how the `"./about"` page works:
 
-![enter image description here](https://i.imgur.com/bqJIU0w.jpg)
+![a schematic wiring diagram showing the relations between layouts, partials, alpine.js, and ejs](https://i.imgur.com/MI1HgV4.jpg)
 
-This diagram shows the use & integration of [Alpine.js](https://alpinejs.dev/) in the lower left-hand corner, where it is highlighted in blue.&nbsp;  The Elbedded JavaScript Templating (.ejs) is highlighted in neon green.&nbsp;
+This diagram shows the use & integration of [Alpine.js](https://alpinejs.dev/) in the lower left-hand corner, where it is highlighted in blue.&nbsp;  The [Embedded JavaScript templating (ejs)](https://ejs.co/) is highlighted in neon green in the same lower left-hand corner.&nbsp;  Also note the use of the [Alpine.js](https://alpinejs.dev/) core framework along with the [Collapse plugin](https://alpinejs.dev/plugins/collapse) specified [here](https://github.com/Richard-Burd/alpine-js-sandbox/blob/main/views/layouts/ucslayout.ejs) in the layout file at: `./views/layouts/ucslayout.ejs` with the following code:
+```html
+<!-- Alpine Plugins https://alpinejs.dev/plugins/collapse -->
+<script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+<!-- Alpine Core -->
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+```
+
+This is what enables the buttons on the `./about` page to drop down (and scroll up) whenever they are clicked since the Alpine.js core doesn't have this feature.&nbsp;  These buttons are modeled on the [green button here on the test site](https://burd-test-1.herokuapp.com/layoutandpartials) named ***Special Alpine.js Animated Dropdown Button (Mouse-Click)*** - the orange-yellow button above it named ***Another Alpine.js Component Button*** is the default button in Alpine.js and it has an entirely different animation.&nbsp;
