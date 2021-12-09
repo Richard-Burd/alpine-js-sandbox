@@ -12,6 +12,9 @@ module.exports = {
   // purge multiple file types
   // https://fromzerotofullstack.com/v/setting-up-tailwind-to-avoid-big-file-sizes/
   purge: ["./views/**/*.html", "./views/**/*.ejs"], // this is called "globing" (the ** recursively searches for the files)
+  // you can also write the above line of code like this:
+  // purge: ["./views/**/*.{html, ejs}"],
+
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
