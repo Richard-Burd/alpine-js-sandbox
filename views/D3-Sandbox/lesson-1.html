@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to D3</title>
+
+    <!-- D3.js is manipulating this -->
+    <style>
+      .container {
+        width: 250px;
+        height: 200px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .bar {
+        /* style for HTML element */
+        background-color: #720570;
+
+        /* style for SVG element */
+        fill: orange;
+      }
+
+      .svg-styles {
+        border: 1px solid blue
+      }
+    </style>
+
+    <!-- Core D3 Library: https://d3js.org/ -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- D3 Scale library: https://github.com/d3/d3-scale -->
+    <script src="https://d3js.org/d3-scale.v3.min.js"></script>
+
+    <script src="../scripts/d3Script1.js" defer></script>
+    <script src="../scripts/d3Script2.js" defer></script>
+  </head>
+  <body>
+    <h2>This page has some D3 Stuff</h2>
+    <div>
+      <!-- "./public/scripts/d3Script1.js" will render html in here -->
+    </div>
+    <br>
+    <svg class="svg-styles">
+      <!-- "./public/scripts/d3Script2.js" will render svg in here -->
+    </svg>
+  </body>
+</html>
