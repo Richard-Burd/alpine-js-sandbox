@@ -62,8 +62,10 @@ svg.append("image")
   .attr('height', '70')
   .attr('href', '../../images/alpinejs.svg')
 
-  // left off here: cannot get this to work for some reason,
-  //.attr('href', '../../images/embedded.svg')
-
-  // the SVG file must contain some sort-of metadata in order to be
-  // imported into another svg.
+svg.append("image")
+  .attr('x', '330')
+  .attr('y', '150')
+  .attr('width', '100')
+  .attr('height', '100')
+  .attr('fill', 'blue')
+  .attr('href', '../../images/embedded.svg');
