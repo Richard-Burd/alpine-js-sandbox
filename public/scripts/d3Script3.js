@@ -43,7 +43,7 @@ svg.append("line")
   .attr('x2', '410') // end-point
   .attr('y2', '290') // end-point
   .attr('stroke', 'gray')
-  .attr('stroke-width', '10')
+  .attr('stroke-width', '10');
 
 // https://youtu.be/nzshmMlOuwI?t=2881
 svg.append("text")
@@ -52,4 +52,18 @@ svg.append("text")
   .attr('y', '280')
   .attr('font-size', '1.2em')
   .attr('fill', 'white')
-  .attr('letter-spacing', '2')
+  .attr('letter-spacing', '2');
+
+svg.append("image")
+  //.attr('viewBox', '512 512')
+  .attr('x', '20')
+  .attr('y', '20')
+  .attr('width', '70')
+  .attr('height', '70')
+  .attr('href', '../../images/alpinejs.svg')
+
+  // left off here: cannot get this to work for some reason,
+  //.attr('href', '../../images/embedded.svg')
+
+  // the SVG file must contain some sort-of metadata in order to be
+  // imported into another svg.
