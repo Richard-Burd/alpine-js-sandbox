@@ -1,5 +1,5 @@
 // https://youtu.be/nzshmMlOuwI
-console.log("i'm reading d4 script Number 3");
+console.log("i'm reading D3 script Number 3");
 
 const canvas = d3.select(".canva");
 
