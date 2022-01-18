@@ -127,7 +127,7 @@ This section describes the Urban Cruise Ship (UCS) website architecture.  &nbsp;
 
 In the future, Alpine.js may be added to the list but it is not used at the moment.
 <br><br><br>
-#### Installation instructions (Ubuntu):
+### Installation instructions (Ubuntu):
 1. run: `$npm install` to install the node modules.
 2. run: `$npm start` to boot up the application
 
