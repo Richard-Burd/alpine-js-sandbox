@@ -131,10 +131,12 @@ In the future, Alpine.js may be added to the list but it is not used at the mome
 1. run: `$npm install` to install the node modules.
 2. run: `$npm start` to boot up the application
 
-### Getting Started
+### TailwindCSS
 Tailwind CSS is implemented so that it automatically updates every time the server is booted up with the  `npm start` command.&nbsp;  In the future you can add custom styling to the file located at `./src/styles.css` and those stylings will be automatically compiled to `./public/tailwind-css/styles.css` whenever you boot up the server.
 
 ![an image of the package.json file](https://i.imgur.com/AhOAhzy.png)
+
+Also, the `./tailwind.config.js` is setup to 'purge' all of the CSS classes that are not being used by this application; this results in shorter loading times.
 
 Currently, we are compiling the code in this repository and then copy/pasting it directly to the existing UCS website build; this means we must use the following CDN link for Tailwind-CSS that effectively allows us to ignore the two `.css` files mentioned above:
 
