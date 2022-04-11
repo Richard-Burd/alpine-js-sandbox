@@ -23,6 +23,10 @@ app.get('/my-custom-download', (req, res) => {
   res.download('./public/images/alpinejs.jpg');
 });
 
+app.get('/handouts-download', (req, res) => {
+  res.download('./public/documents/handouts.pdf');
+});
+
 // listen for Requests
 app.listen(PORT);
 
