@@ -184,4 +184,4 @@ This diagram shows the use & integration of [Alpine.js](https://alpinejs.dev/) i
 
 This is what enables the buttons on the `./about` page to drop down (and scroll up) whenever they are clicked since the Alpine.js core doesn't have this feature.&nbsp;  These buttons are modeled on the [green button here on the test site](https://burd-test-1.herokuapp.com/layoutandpartials) named ***Special Alpine.js Animated Dropdown Button (Mouse-Click)*** - the orange-yellow button above it named ***Another Alpine.js Component Button*** is the default button in Alpine.js and it has an entirely different animation.&nbsp;
 
-12
+$ git push heroku master
